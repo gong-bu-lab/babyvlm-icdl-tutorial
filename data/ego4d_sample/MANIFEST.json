@@ -1,0 +1,90 @@
+{
+  "source_root": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json",
+  "seed": 42,
+  "n_samples_per_task": 10,
+  "total_items": 100,
+  "total_images": 613,
+  "total_missing_images": 0,
+  "entries": [
+    {
+      "task": "count",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/count/count_test.json",
+      "source_total_items": 1015,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "task": "memory",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/memory/memory_test_200.json",
+      "source_total_items": 200,
+      "n_items": 10,
+      "n_images": 290,
+      "missing_images": []
+    },
+    {
+      "task": "vdr-binary",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/vdr/binary_test.json",
+      "source_total_items": 356,
+      "n_items": 10,
+      "n_images": 64,
+      "missing_images": []
+    },
+    {
+      "task": "vdr-open",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/vdr/open_test.json",
+      "source_total_items": 356,
+      "n_items": 10,
+      "n_images": 79,
+      "missing_images": []
+    },
+    {
+      "task": "localize",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/localize/localize_test.json",
+      "source_total_items": 992,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "task": "leftright",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/leftright/leftright_test.json",
+      "source_total_items": 1009,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "task": "picture_vocabulary",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/picture_vocabulary/pv_test.json",
+      "source_total_items": 346,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "task": "spatialdetails",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/spatialdetails/spatialdetails_test.json",
+      "source_total_items": 1852,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "task": "compare_synthetic",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/compare_synthetic/compare_synthetic_test.json",
+      "source_total_items": 1049,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "task": "compare_real",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/ego4d_json/compare_real/compare_real_test.json",
+      "source_total_items": 939,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    }
+  ]
+}

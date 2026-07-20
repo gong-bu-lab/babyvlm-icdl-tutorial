@@ -1,0 +1,112 @@
+[
+ {
+  "bb": [
+   627.47,
+   602.78,
+   440.18,
+   294.65
+  ],
+  "id": "localize_104",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the yellow. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0000_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   69.79,
+   421.39,
+   671.89,
+   378.78
+  ],
+  "id": "localize_94",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the box. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0001_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   371.44,
+   67.85,
+   460.97,
+   523.62
+  ],
+  "id": "localize_389",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the chair. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/localize_0002_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   196.54,
+   610.37,
+   333.83,
+   481.98
+  ],
+  "id": "localize_99",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the broom. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0003_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   1376.92,
+   386.44,
+   529.12,
+   413.09
+  ],
+  "id": "localize_367",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the hat. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0004_0.jpeg"
+  ]
+ }
+]

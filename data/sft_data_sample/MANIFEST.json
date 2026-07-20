@@ -1,0 +1,287 @@
+{
+  "seed": 42,
+  "n_samples_per_task": 10,
+  "total_items": 300,
+  "total_images": 1805,
+  "total_missing_images": 7,
+  "entries": [
+    {
+      "split": "train",
+      "task": "count",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/object_counting/count_v2_train.json",
+      "source_total_items": 13695,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "memory",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/memory_task/memory_task_train_final.json",
+      "source_total_items": 12000,
+      "n_items": 10,
+      "n_images": 290,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "vdr-binary",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/total_binary_dataset_train.json",
+      "source_total_items": 2584,
+      "n_items": 10,
+      "n_images": 65,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "vdr-open",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/total_open_dataset_train.json",
+      "source_total_items": 2584,
+      "n_items": 10,
+      "n_images": 70,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "localize",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/localize_task_cropped/localize_4_crop_instructions_abc_train.json",
+      "source_total_items": 12250,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "leftright",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/leftright/interleaved_leftright_instructions_abc_train.json",
+      "source_total_items": 12250,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "picture_vocabulary",
+      "source": "/projectnb/ivc-ml/vwang/picture_vocabulary_v6_train_verified/dataset.json",
+      "source_total_items": 22426,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "spatialdetails",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/spatialdetails/abc_interleaved_spatialdetails_instructions_train.json",
+      "source_total_items": 11818,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "compare_synthetic",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_synthetic/compare_synthetic_instructions_train_abc.json",
+      "source_total_items": 11200,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "split": "train",
+      "task": "compare_real",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_real/compare_larger_train_abc.json",
+      "source_total_items": 12404,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "count",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/object_counting/count_v2_test.json",
+      "source_total_items": 3019,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "memory",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/memory_task/memory_task_test_final_250.json",
+      "source_total_items": 250,
+      "n_items": 10,
+      "n_images": 290,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "vdr-binary",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/binary_dataset_test.json",
+      "source_total_items": 465,
+      "n_items": 10,
+      "n_images": 72,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "vdr-open",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/open_dataset_test.json",
+      "source_total_items": 465,
+      "n_items": 10,
+      "n_images": 64,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "localize",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/localize_task_cropped/localize_4_crop_instructions_abc_test.json",
+      "source_total_items": 2100,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "leftright",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/leftright/interleaved_leftright_instructions_abc_test.json",
+      "source_total_items": 2265,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "picture_vocabulary",
+      "source": "/projectnb/ivc-ml/vwang/picture_vocabulary_v2/dataset_seen.json",
+      "source_total_items": 1132,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "spatialdetails",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/spatialdetails/abc_interleaved_spatialdetails_instructions_test.json",
+      "source_total_items": 1243,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "compare_synthetic",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_synthetic/compare_synthetic_instructions_test_abc.json",
+      "source_total_items": 1832,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "split": "test",
+      "task": "compare_real",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_real/whohasmore_naturalistic.json",
+      "source_total_items": 2199,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "count",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/object_counting/count_v2_val.json",
+      "source_total_items": 2966,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "memory",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/memory_task/memory_task_val_final_250.json",
+      "source_total_items": 250,
+      "n_items": 10,
+      "n_images": 290,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "vdr-binary",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/binary_dataset_val.json",
+      "source_total_items": 440,
+      "n_items": 10,
+      "n_images": 73,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "vdr-open",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/visual_delay_response/open_dataset_val.json",
+      "source_total_items": 440,
+      "n_items": 10,
+      "n_images": 58,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "localize",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/localize_task_cropped/localize_4_crop_instructions_abc_val.json",
+      "source_total_items": 2131,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "leftright",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/leftright/interleaved_leftright_instructions_abc_val.json",
+      "source_total_items": 2229,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "picture_vocabulary",
+      "source": "/projectnb/ivc-ml/vwang/picture_vocabulary_v2_val/dataset_seen.json",
+      "source_total_items": 742,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "spatialdetails",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/spatialdetails/abc_interleaved_spatialdetails_instructions_val.json",
+      "source_total_items": 1243,
+      "n_items": 10,
+      "n_images": 40,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "compare_synthetic",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_synthetic/compare_synthetic_instructions_val_abc.json",
+      "source_total_items": 1813,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    },
+    {
+      "split": "val",
+      "task": "compare_real",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babydata/scc_json/compare_count_real/compare_val.json",
+      "source_total_items": 1940,
+      "n_items": 10,
+      "n_images": 13,
+      "missing_images": [
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/Y_20190823_1809_03_0656.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/Y_20190504_1420_02_1136.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/Y_20191116_2102_03_1593.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/Y_20180925_0711_01_1601.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/S_20131212_1325_02_0225.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/S_20141001_2314_07_0458.jpg",
+        "/net/ivcfs5/mnt/data/wsashawn/tasks/pointcount/val/S_20140828_2211_02_1437.jpg"
+      ]
+    }
+  ]
+}

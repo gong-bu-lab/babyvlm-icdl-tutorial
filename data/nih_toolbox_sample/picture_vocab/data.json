@@ -1,0 +1,82 @@
+[
+ {
+  "id": "nih_picture_vocab_task_35",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'egress' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_0000_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_190",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Gregarious' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_0001_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_26",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Blanket' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_0002_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_175",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Engraved' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_0003_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_191",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Angry' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_0004_0.PNG"
+  ]
+ }
+]

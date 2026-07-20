@@ -1,0 +1,66 @@
+{
+  "source_root": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox",
+  "seed": 42,
+  "n_samples_per_task": 10,
+  "total_items": 55,
+  "total_images": 551,
+  "total_missing_images": 0,
+  "entries": [
+    {
+      "task": "count",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/count.json",
+      "source_total_items": 6,
+      "n_items": 6,
+      "n_images": 6,
+      "missing_images": []
+    },
+    {
+      "task": "memory",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/memory_task.json",
+      "source_total_items": 1,
+      "n_items": 1,
+      "n_images": 59,
+      "missing_images": []
+    },
+    {
+      "task": "picture_vocab",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/picture_vocab_task.json",
+      "source_total_items": 253,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "task": "picture_vocab_selected",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/picture_vocab_selected_task.json",
+      "source_total_items": 51,
+      "n_items": 10,
+      "n_images": 10,
+      "missing_images": []
+    },
+    {
+      "task": "spatial",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/spatial_task.json",
+      "source_total_items": 12,
+      "n_items": 10,
+      "n_images": 46,
+      "missing_images": []
+    },
+    {
+      "task": "vdr",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/vdr_image_task.json",
+      "source_total_items": 8,
+      "n_items": 8,
+      "n_images": 400,
+      "missing_images": []
+    },
+    {
+      "task": "who_has_more",
+      "source": "/projectnb/ivc-ml/wqwang/Codelab/babyvlm2/nih_toolbox/who_has_more_task.json",
+      "source_total_items": 24,
+      "n_items": 10,
+      "n_images": 20,
+      "missing_images": []
+    }
+  ]
+}

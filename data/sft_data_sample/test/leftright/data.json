@@ -1,0 +1,97 @@
+[
+ {
+  "id": "leftright_469",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following is the same as this? Answer with a number. (A) <image> (B) <image> (C) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/leftright_0000_0.jpeg",
+   "images/leftright_0000_1.jpeg",
+   "images/leftright_0000_2.jpeg",
+   "images/leftright_0000_3.jpeg"
+  ]
+ },
+ {
+  "id": "leftright_2199",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following is the same as this? Answer with a number. (A) <image> (B) <image> (C) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/leftright_0001_0.jpeg",
+   "images/leftright_0001_1.jpeg",
+   "images/leftright_0001_2.jpeg",
+   "images/leftright_0001_3.jpeg"
+  ]
+ },
+ {
+  "id": "leftright_1092",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following is the same as this? Answer with a number. (A) <image> (B) <image> (C) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/leftright_0002_0.jpeg",
+   "images/leftright_0002_1.jpeg",
+   "images/leftright_0002_2.jpeg",
+   "images/leftright_0002_3.jpeg"
+  ]
+ },
+ {
+  "id": "leftright_1393",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following is the same as this? Answer with a number. (A) <image> (B) <image> (C) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/leftright_0003_0.jpeg",
+   "images/leftright_0003_1.jpeg",
+   "images/leftright_0003_2.jpeg",
+   "images/leftright_0003_3.jpeg"
+  ]
+ },
+ {
+  "id": "leftright_456",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following is the same as this? Answer with a number. (A) <image> (B) <image> (C) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/leftright_0004_0.jpeg",
+   "images/leftright_0004_1.jpeg",
+   "images/leftright_0004_2.jpeg",
+   "images/leftright_0004_3.jpeg"
+  ]
+ }
+]

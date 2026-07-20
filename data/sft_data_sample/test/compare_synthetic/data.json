@@ -1,0 +1,87 @@
+[
+ {
+  "id": "compare_synthetic_490",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of refrigerator? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0000_0.jpeg",
+   "images/compare_synthetic_0000_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_118",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of coffeemaker? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0001_0.jpeg",
+   "images/compare_synthetic_0001_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_493",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of case? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0002_0.jpeg",
+   "images/compare_synthetic_0002_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_1798",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of broom? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0003_0.jpeg",
+   "images/compare_synthetic_0003_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_1161",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of buttercontainer? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0004_0.jpeg",
+   "images/compare_synthetic_0004_1.jpeg"
+  ]
+ }
+]

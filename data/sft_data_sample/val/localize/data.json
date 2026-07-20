@@ -1,0 +1,112 @@
+[
+ {
+  "bb": [
+   1.0,
+   75.0,
+   343.0,
+   154.0
+  ],
+  "id": "count_541",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the cymbals. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/localize_0000_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   126.0,
+   98.0,
+   302.0,
+   224.0
+  ],
+  "id": "count_1936",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the wall hanging. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/localize_0001_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   290.0,
+   85.0,
+   205.0,
+   253.0
+  ],
+  "id": "count_995",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the stuffed toy. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/localize_0002_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   270.0,
+   0.0,
+   228.0,
+   158.0
+  ],
+  "id": "count_1937",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the wall hanging. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/localize_0003_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   222.0,
+   283.0,
+   287.0,
+   197.0
+  ],
+  "id": "count_1667",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the clothespins. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0004_0.jpeg"
+  ]
+ }
+]

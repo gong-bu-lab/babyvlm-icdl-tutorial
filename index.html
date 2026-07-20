@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BabyVLM Tutorial – ICDL 2026</title>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%B6%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ═══════════════════ Design tokens ═══════════════════ */
+    :root {
+      /* Palette — "Field Notes": warm paper, ink, one sage-forest accent */
+      --paper:        #f6f5f1;
+      --surface:      #ffffff;
+      --surface-2:    #fbfaf6;
+      --ink:          #22201c;
+      --ink-soft:     #3b382f;
+      --muted:        #6b6659;
+      --faint:        #9a9384;
+      --border:       #e5e1d8;
+      --border-strong:#d6d1c4;
+      --accent:       #3f5a4a;
+      --accent-strong:#2e4436;
+      --accent-tint:  #eaefe9;
+
+      /* Type */
+      --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+      --font-sans:    "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono:    ui-monospace, "SF Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+
+      /* Space */
+      --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+      --sp-5: 24px; --sp-6: 32px; --sp-7: 48px; --sp-8: 64px; --sp-9: 96px;
+
+      --maxw:      1360px;
+      --nav-h:     58px;
+      --radius:    4px;
+      --radius-lg: 8px;
+      --shadow-sm: 0 1px 2px rgba(34,32,28,0.04);
+      --shadow:    0 1px 2px rgba(34,32,28,0.04), 0 14px 34px -20px rgba(34,32,28,0.28);
+      --ease:      cubic-bezier(0.22, 0.61, 0.24, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    ::selection { background: var(--accent-tint); color: var(--accent-strong); }
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    /* ═══════════════════ Animation primitives ═══════════════════ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .reveal { opacity: 0; transform: translateY(26px); }
+    .reveal.in-view {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    /* staggered children within a revealed block */
+    .reveal.in-view .stagger > * {
+      opacity: 0;
+      animation: fadeUp 0.7s var(--ease) both;
+    }
+    .reveal.in-view .stagger > *:nth-child(1) { animation-delay: 0.05s; }
+    .reveal.in-view .stagger > *:nth-child(2) { animation-delay: 0.13s; }
+    .reveal.in-view .stagger > *:nth-child(3) { animation-delay: 0.21s; }
+    .reveal.in-view .stagger > *:nth-child(4) { animation-delay: 0.29s; }
+    .reveal.in-view .stagger > *:nth-child(5) { animation-delay: 0.37s; }
+    .reveal.in-view .stagger > *:nth-child(6) { animation-delay: 0.45s; }
+    .reveal.in-view .stagger > *:nth-child(7) { animation-delay: 0.53s; }
+
+    /* hero entrance (runs on load) */
+    .anim { animation: fadeUp 0.85s var(--ease) both; }
+    .anim-1 { animation-delay: 0.05s; }
+    .anim-2 { animation-delay: 0.16s; }
+    .anim-3 { animation-delay: 0.27s; }
+    .anim-4 { animation-delay: 0.38s; }
+    .anim-5 { animation-delay: 0.49s; }
+
+    /* ═══════════════════ Top nav ═══════════════════ */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      padding: 14px clamp(20px, 5vw, 56px);
+      background: color-mix(in srgb, var(--paper) 86%, transparent);
+      backdrop-filter: saturate(1.1) blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--sp-4);
+    }
+    .brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: clamp(18px, 2.4vw, 34px);
+      font-size: 0.9rem;
+    }
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 4px 0;
+      position: relative;
+      transition: color 0.2s var(--ease);
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.active { color: var(--ink); }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 100%; bottom: -1px;
+      height: 2px;
+      background: var(--accent);
+      transition: right 0.28s var(--ease);
+    }
+    .nav-links a:hover::after { right: 0; }
+    .nav-links a.active::after { right: 0; }
+
+    /* ═══════════════════ Hero ═══════════════════ */
+    header {
+      padding: clamp(48px, 8vw, 108px) clamp(20px, 5vw, 56px) clamp(44px, 6vw, 76px);
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(90% 120% at 100% -10%, var(--accent-tint) 0%, transparent 52%),
+        var(--paper);
+    }
+    .hero-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.55fr 1fr;
+      gap: clamp(32px, 5vw, 88px);
+      align-items: end;
+    }
+
+    .kicker {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      margin-bottom: var(--sp-5);
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-size: clamp(2.1rem, 5.4vw, 4.1rem);
+      line-height: 1.04;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: var(--sp-5);
+      text-wrap: balance;
+    }
+    h1 em { font-style: italic; font-weight: 500; color: var(--accent-strong); }
+    .tagline {
+      font-size: 1.18rem;
+      color: var(--ink-soft);
+      max-width: 46ch;
+      margin: 0;
+    }
+
+    .hero-side {
+      border-left: 1px solid var(--border);
+      padding-left: clamp(24px, 3vw, 44px);
+    }
+    .authors {
+      font-size: 0.98rem;
+      color: var(--ink);
+      margin-bottom: var(--sp-2);
+    }
+    .authors sup { color: var(--accent-strong); }
+    .affiliations {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: var(--sp-6);
+    }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      border-radius: var(--radius);
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid transparent;
+      transition: background 0.2s var(--ease), border-color 0.2s var(--ease),
+                  color 0.2s var(--ease), transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    }
+    .btn-primary   { background: var(--accent); color: #fff; }
+    .btn-primary:hover   { background: var(--accent-strong); transform: translateY(-2px); box-shadow: var(--shadow); }
+    .btn-secondary { background: transparent; color: var(--ink); border-color: var(--border-strong); }
+    .btn-secondary:hover { border-color: var(--ink); background: var(--surface); transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    /* ═══════════════════ Main layout ═══════════════════ */
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: clamp(48px, 7vw, 96px) clamp(20px, 5vw, 56px) var(--sp-9);
+    }
+    /* editorial left-rail: label on the left, content spanning the rest */
+    section {
+      display: grid;
+      grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+      gap: clamp(24px, 5vw, 80px);
+      margin-bottom: clamp(64px, 9vw, 120px);
+    }
+    section:last-child { margin-bottom: 0; }
+    .section-head { position: sticky; top: calc(var(--nav-h) + 20px); align-self: start; }
+
+    h2 {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      border: 0;
+    }
+    .section-body > *:first-child { margin-top: 0; }
+
+    p { margin-bottom: var(--sp-4); color: var(--ink-soft); max-width: 72ch; }
+    p strong { color: var(--ink); font-weight: 600; }
+
+    blockquote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(1.4rem, 3vw, 2.05rem);
+      line-height: 1.28;
+      color: var(--ink);
+      max-width: 26ch;
+      margin: 0 0 var(--sp-6);
+      padding-left: var(--sp-5);
+      border-left: 2px solid var(--accent);
+    }
+
+    /* ── Framework pillars — editorial list, not an icon grid ── */
+    .pillars { margin-top: var(--sp-7); border-top: 1px solid var(--border); }
+    .pillar {
+      display: grid;
+      grid-template-columns: 2.5rem minmax(9rem, 16rem) 1fr;
+      gap: clamp(16px, 4vw, 56px);
+      align-items: baseline;
+      padding: var(--sp-6) 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .pillar-index {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--accent-strong);
+    }
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    .pillar p { font-size: 0.98rem; color: var(--muted); margin: 0; }
+
+    /* ── Tables (schedule + resources) ── */
+    .schedule { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    .schedule thead th {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--faint);
+      text-align: left;
+      padding: 0 var(--sp-4) var(--sp-3);
+      border-bottom: 1px solid var(--border-strong);
+    }
+    .schedule td {
+      padding: var(--sp-4);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--ink-soft);
+    }
+    .schedule tbody tr:last-child td { border-bottom: none; }
+    .schedule tbody tr { transition: background 0.2s var(--ease); }
+    .schedule tbody tr:hover td { background: var(--surface-2); }
+
+    /* time cell doubles as the milestone-timeline spine (signature) */
+    .schedule td.time {
+      white-space: nowrap;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-variant-numeric: tabular-nums;
+      width: 220px;
+      position: relative;
+      padding-left: 60px;
+    }
+    #schedule .schedule tbody td.time::before {
+      content: "";
+      position: absolute;
+      left: 6px; top: 0; bottom: 0;
+      width: 1px;
+      background: var(--border-strong);
+    }
+    #schedule .schedule tbody tr:first-child td.time::before { top: 22px; }
+    #schedule .schedule tbody tr:last-child td.time::before  { bottom: auto; height: 22px; }
+    #schedule .schedule tbody td.time::after {
+      content: "";
+      position: absolute;
+      left: 2px; top: 20px;
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 2px solid var(--accent);
+      transition: background 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    #schedule .schedule tbody tr:hover td.time::after { background: var(--accent); transform: scale(1.25); }
+
+    .schedule td:nth-child(2) { color: var(--ink); font-weight: 500; }
+
+    .tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-left: 8px;
+      vertical-align: middle;
+      border: 1px solid transparent;
+    }
+    .tag-talk   { background: var(--accent-tint); color: var(--accent-strong); }
+    .tag-demo   { background: #e9efe9; color: #2e4436; border-color: #cfe0cf; }
+    .tag-break  { background: transparent; color: var(--faint); border-color: var(--border-strong); }
+    .tag-hands  { background: #f3ecda; color: #7a5b16; }
+
+    /* ── Speaker cards ── */
+    .speakers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: var(--sp-5);
+    }
+    .speaker-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+    }
+    .speaker-card:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+    .avatar {
+      flex: none;
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--accent-tint);
+      color: var(--accent-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+    .speaker-name { font-weight: 600; font-size: 0.98rem; color: var(--ink); }
+    .speaker-affil { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── Citation ── */
+    .cite-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 2px solid var(--accent);
+      border-radius: var(--radius);
+      padding: var(--sp-5) var(--sp-6);
+      overflow-x: auto;
+      font-family: var(--font-mono);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+    }
+
+    /* ── Footer ── */
+    footer {
+      font-size: 0.85rem;
+      color: var(--muted);
+      padding: var(--sp-7) clamp(20px, 5vw, 56px);
+      border-top: 1px solid var(--border);
+    }
+    footer .footer-inner { max-width: var(--maxw); margin: 0 auto; text-align: center; }
+    footer a { color: var(--ink-soft); }
+
+    /* ── Responsive ── */
+    @media (max-width: 880px) {
+      .hero-inner { grid-template-columns: 1fr; align-items: start; gap: var(--sp-7); }
+      .hero-side { border-left: 0; padding-left: 0; }
+      section { grid-template-columns: 1fr; gap: var(--sp-4); }
+      .section-head { position: static; }
+    }
+    @media (max-width: 620px) {
+      body { font-size: 16px; }
+      .pillar { grid-template-columns: 2rem 1fr; }
+      .pillar p { grid-column: 2; }
+      .pillar-index { grid-row: span 2; }
+      .time { width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .reveal.in-view .stagger > * { opacity: 1 !important; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">BabyVLM</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Tutorial</a>
+      <a href="dataset.html">Dataset</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<header>
+  <div class="hero-inner">
+    <div class="hero-lead">
+      <div class="kicker anim anim-1">ICDL 2026 Tutorial</div>
+      <h1 class="anim anim-2">BabyVLM: <em>democratizing research</em> on the pretraining of vision large language models</h1>
+      <p class="tagline anim anim-3">Scaling down pretraining to make vision-foundation-model research accessible to everyone.</p>
+    </div>
+    <div class="hero-side">
+      <p class="authors anim anim-4">
+        Max Whitton<sup>1</sup> &nbsp;·&nbsp; Wenqi Wang<sup>1</sup> &nbsp;·&nbsp; Michael Frank<sup>2</sup> &nbsp;·&nbsp; Boqing Gong<sup>1</sup>
+      </p>
+      <p class="affiliations anim anim-4">
+        <sup>1</sup> Boston University &nbsp;·&nbsp; <sup>2</sup> Stanford University
+      </p>
+      <div class="btn-group anim anim-5">
+        <a class="btn btn-primary" href="#">Paper</a>
+        <a class="btn btn-secondary" href="#">GitHub</a>
+        <a class="btn btn-secondary" href="#">Slides</a>
+        <a class="btn btn-secondary" href="dataset.html">Dataset</a>
+        <a class="btn btn-secondary" href="#">Colab Notebook</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main>
+
+  <!-- Abstract -->
+  <section id="abstract" class="reveal">
+    <div class="section-head"><h2>Abstract</h2></div>
+    <div class="section-body">
+      <blockquote>"What I cannot create, I do not understand." — Richard Feynman</blockquote>
+      <p>
+        Pretraining vision foundation models (VFMs) is prohibitively expensive, making it a privilege for
+        institutions with abundant resources and leaving independent researchers to downstream tasks such as
+        benchmarking, interpreting, and aligning VFMs. This situation is a crisis for computer vision research:
+        independent researchers and the public cannot gain a true understanding, trust, or safe use of VFMs
+        passively from open weights or APIs.
+      </p>
+      <p>
+        We propose <strong>democratizing VFM pretraining</strong> by scaling it down to a developmentally
+        plausible framework that is scientifically reasonable and computationally friendly to university budgets.
+        Our goal is to promote <em>exploration</em> rather than exploitation of pretraining, enabling independent
+        researchers to build general-purpose VFMs that approach "baby intelligence" — benefiting efforts toward
+        "grown-up" AI.
+      </p>
+      <p>
+        This framework closely mimics the minimal yet highly informative sensory experiences of human infants,
+        encompassing three pillars:
+      </p>
+
+      <div class="pillars stagger">
+        <div class="pillar">
+          <div class="pillar-index">i</div>
+          <h3>Pretraining Data</h3>
+          <p>
+            Curated from longitudinal, egocentric audiovisual recordings of babies — capturing how infants
+            naturally perceive the world.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-index">ii</div>
+          <h3>Evaluation Benchmarks</h3>
+          <p>
+            A suite of developmentally aligned benchmarks assessing capabilities against cognitive milestones
+            like object permanence, social skills, and language acquisition.
+          </p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-index">iii</div>
+          <h3>Pretraining Codebase</h3>
+          <p>
+            A user-friendly codebase and baseline models designed to run on university-scale compute budgets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="reveal">
+    <div class="section-head"><h2>Tutorial Schedule</h2></div>
+    <div class="section-body">
+      <table class="schedule">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">09:00 – 09:20</td>
+            <td>Opening &amp; Motivation <span class="tag tag-talk">Talk</span></td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td class="time">09:20 – 09:50</td>
+            <td>VFM Pretraining 101 <span class="tag tag-talk">Talk</span></td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td class="time">09:50 – 10:20</td>
+            <td>BabyVLM Dataset &amp; Curation Pipeline <span class="tag tag-talk">Talk</span></td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td class="time">10:20 – 10:35</td>
+            <td>Coffee Break <span class="tag tag-break">Break</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class="time">10:35 – 11:05</td>
+            <td>Developmentally Aligned Benchmarks <span class="tag tag-talk">Talk</span></td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td class="time">11:05 – 11:35</td>
+            <td>Hands-On: Train Your Baby VFM <span class="tag tag-hands">Hands-on</span></td>
+            <td>TBD</td>
+          </tr>
+          <tr>
+            <td class="time">11:35 – 12:00</td>
+            <td>Live Demo &amp; Q&amp;A <span class="tag tag-demo">Demo</span></td>
+            <td>All Presenters</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  <section id="speakers" class="reveal">
+    <div class="section-head"><h2>Presenters</h2></div>
+    <div class="section-body">
+      <div class="speakers stagger">
+        <div class="speaker-card">
+          <div class="avatar">P1</div>
+          <div>
+            <div class="speaker-name">Presenter One</div>
+            <div class="speaker-affil">University A</div>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="avatar">P2</div>
+          <div>
+            <div class="speaker-name">Presenter Two</div>
+            <div class="speaker-affil">University B</div>
+          </div>
+        </div>
+        <div class="speaker-card">
+          <div class="avatar">P3</div>
+          <div>
+            <div class="speaker-name">Presenter Three</div>
+            <div class="speaker-affil">Institute C</div>
+          </div>
+        </div>
+        <!-- <div class="speaker-card">
+          <div class="avatar">P4</div>
+          <div>
+            <div class="speaker-name">Presenter Four</div>
+            <div class="speaker-affil">University A</div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section id="resources" class="reveal">
+    <div class="section-head"><h2>Resources</h2></div>
+    <div class="section-body">
+      <p>All materials will be made available before the tutorial date. Links will be updated here.</p>
+      <table class="schedule">
+        <thead>
+          <tr><th>Resource</th><th>Description</th><th>Link</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Paper</td>
+            <td>Full technical report</td>
+            <td><a href="#">Coming soon</a></td>
+          </tr>
+          <tr>
+            <td>Dataset</td>
+            <td>Egocentric baby video corpus</td>
+            <td><a href="#">Coming soon</a></td>
+          </tr>
+          <tr>
+            <td>Code</td>
+            <td>Pretraining codebase &amp; baselines</td>
+            <td><a href="#">Coming soon</a></td>
+          </tr>
+          <tr>
+            <td>Slides</td>
+            <td>Tutorial slide decks</td>
+            <td><a href="#">Coming soon</a></td>
+          </tr>
+          <tr>
+            <td>Notebook</td>
+            <td>Hands-on Colab notebook</td>
+            <td><a href="#">Coming soon</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Citation -->
+  <section id="citation" class="reveal">
+    <div class="section-head"><h2>Citation</h2></div>
+    <div class="section-body">
+      <p>If you find this work useful, please cite:</p>
+      <pre class="cite-block">      TBD
+    </pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    BabyVLM Tutorial · ICDL 2026 &nbsp;|&nbsp; Questions? Contact us at
+    <a href="mailto:placeholder@example.com">placeholder@example.com</a>
+  </div>
+</footer>
+
+<script>
+// Presentational scroll-reveal only — no app logic.
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in-view'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (en) {
+      if (en.isIntersecting) { en.target.classList.add('in-view'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+  items.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>

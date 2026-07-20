@@ -1,0 +1,115 @@
+[
+ {
+  "id": "Y_20190308_1222_01_clip_014",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image> does the dishwasher leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "right"
+   }
+  ],
+  "image": [
+   "images/vdr-binary_0000_0.jpg",
+   "images/vdr-binary_0000_1.jpg",
+   "images/vdr-binary_0000_2.jpg",
+   "images/vdr-binary_0000_3.jpg",
+   "images/vdr-binary_0000_4.jpg",
+   "images/vdr-binary_0000_5.jpg",
+   "images/vdr-binary_0000_6.jpg"
+  ]
+ },
+ {
+  "id": "S_20130731_0914_03_clip_008",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image> do the toys collectively leave the frame through the top side of the frame or the bottom side of the frame? respond ONLY with 'top' or 'bottom'."
+   },
+   {
+    "from": "gpt",
+    "value": "bottom"
+   }
+  ],
+  "image": [
+   "images/vdr-binary_0001_0.jpg",
+   "images/vdr-binary_0001_1.jpg",
+   "images/vdr-binary_0001_2.jpg",
+   "images/vdr-binary_0001_3.jpg",
+   "images/vdr-binary_0001_4.jpg",
+   "images/vdr-binary_0001_5.jpg",
+   "images/vdr-binary_0001_6.jpg",
+   "images/vdr-binary_0001_7.jpg",
+   "images/vdr-binary_0001_8.jpg"
+  ]
+ },
+ {
+  "id": "Y_20190419_1405_02_clip_013",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image> does the toy leave the frame through the top side of the frame or the bottom side of the frame? respond ONLY with 'top' or 'bottom'."
+   },
+   {
+    "from": "gpt",
+    "value": "bottom"
+   }
+  ],
+  "image": [
+   "images/vdr-binary_0002_0.jpg",
+   "images/vdr-binary_0002_1.jpg",
+   "images/vdr-binary_0002_2.jpg",
+   "images/vdr-binary_0002_3.jpg",
+   "images/vdr-binary_0002_4.jpg",
+   "images/vdr-binary_0002_5.jpg",
+   "images/vdr-binary_0002_6.jpg",
+   "images/vdr-binary_0002_7.jpg"
+  ]
+ },
+ {
+  "id": "S_20130720_0903_02_clip_003",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image> do the toys collectively leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr-binary_0003_0.jpg",
+   "images/vdr-binary_0003_1.jpg",
+   "images/vdr-binary_0003_2.jpg",
+   "images/vdr-binary_0003_3.jpg",
+   "images/vdr-binary_0003_4.jpg"
+  ]
+ },
+ {
+  "id": "A_20130612_0830_04_clip_024",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image> does the toy leave the frame through the top side of the frame or the bottom side of the frame? respond ONLY with 'top' or 'bottom'."
+   },
+   {
+    "from": "gpt",
+    "value": "bottom"
+   }
+  ],
+  "image": [
+   "images/vdr-binary_0004_0.jpg",
+   "images/vdr-binary_0004_1.jpg",
+   "images/vdr-binary_0004_2.jpg",
+   "images/vdr-binary_0004_3.jpg",
+   "images/vdr-binary_0004_4.jpg",
+   "images/vdr-binary_0004_5.jpg",
+   "images/vdr-binary_0004_6.jpg",
+   "images/vdr-binary_0004_7.jpg",
+   "images/vdr-binary_0004_8.jpg"
+  ]
+ }
+]

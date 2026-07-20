@@ -1,0 +1,97 @@
+[
+ {
+  "id": "picture_vocabulary_000271",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'plate' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0000_0.png",
+   "images/picture_vocabulary_0000_1.png",
+   "images/picture_vocabulary_0000_2.png",
+   "images/picture_vocabulary_0000_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000269",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'pillow' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0001_0.png",
+   "images/picture_vocabulary_0001_1.png",
+   "images/picture_vocabulary_0001_2.png",
+   "images/picture_vocabulary_0001_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000747",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'oven' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0002_0.png",
+   "images/picture_vocabulary_0002_1.png",
+   "images/picture_vocabulary_0002_2.png",
+   "images/picture_vocabulary_0002_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000620",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'blanket' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0003_0.png",
+   "images/picture_vocabulary_0003_1.png",
+   "images/picture_vocabulary_0003_2.png",
+   "images/picture_vocabulary_0003_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000200",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'firetruck' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0004_0.png",
+   "images/picture_vocabulary_0004_1.png",
+   "images/picture_vocabulary_0004_2.png",
+   "images/picture_vocabulary_0004_3.png"
+  ]
+ }
+]

@@ -1,0 +1,112 @@
+[
+ {
+  "bb": [
+   158.0,
+   6.0,
+   197.0,
+   155.0
+  ],
+  "id": "count_449",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the drain. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/localize_0000_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   372.0,
+   269.0,
+   266.0,
+   211.0
+  ],
+  "id": "count_626",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the fork. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0001_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   186.0,
+   228.0,
+   232.0,
+   252.0
+  ],
+  "id": "count_655",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the grasping. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0002_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   424.0,
+   50.0,
+   182.0,
+   192.0
+  ],
+  "id": "count_1729",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the baby bottle. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/localize_0003_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   258.0,
+   135.0,
+   238.0,
+   210.0
+  ],
+  "id": "count_260",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the log. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0004_0.jpeg"
+  ]
+ }
+]

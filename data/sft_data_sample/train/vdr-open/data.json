@@ -1,0 +1,114 @@
+[
+ {
+  "id": "Y_20181215_1001_01_clip_019_augmented",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image> which part of the frame does the chair leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "top"
+   }
+  ],
+  "image": [
+   "images/vdr-open_0000_0.jpg",
+   "images/vdr-open_0000_1.jpg",
+   "images/vdr-open_0000_2.jpg",
+   "images/vdr-open_0000_3.jpg",
+   "images/vdr-open_0000_4.jpg",
+   "images/vdr-open_0000_5.jpg",
+   "images/vdr-open_0000_6.jpg",
+   "images/vdr-open_0000_7.jpg",
+   "images/vdr-open_0000_8.jpg"
+  ]
+ },
+ {
+  "id": "Y_20190209_1126_03_clip_005_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image><image> which part of the frame does the fridge leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr-open_0001_0.jpg",
+   "images/vdr-open_0001_1.jpg",
+   "images/vdr-open_0001_2.jpg",
+   "images/vdr-open_0001_3.jpg",
+   "images/vdr-open_0001_4.jpg",
+   "images/vdr-open_0001_5.jpg",
+   "images/vdr-open_0001_6.jpg",
+   "images/vdr-open_0001_7.jpg",
+   "images/vdr-open_0001_8.jpg",
+   "images/vdr-open_0001_9.jpg"
+  ]
+ },
+ {
+  "id": "Y_20191108_2025_01_clip_007_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> which part of the frame does the toy leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "bottom left"
+   }
+  ],
+  "image": [
+   "images/vdr-open_0002_0.jpg",
+   "images/vdr-open_0002_1.jpg",
+   "images/vdr-open_0002_2.jpg",
+   "images/vdr-open_0002_3.jpg",
+   "images/vdr-open_0002_4.jpg",
+   "images/vdr-open_0002_5.jpg"
+  ]
+ },
+ {
+  "id": "Y_20181020_0806_01_clip_011_augmented",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> which part of the frame does the phone leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "bottom"
+   }
+  ],
+  "image": [
+   "images/vdr-open_0003_0.jpg",
+   "images/vdr-open_0003_1.jpg",
+   "images/vdr-open_0003_2.jpg",
+   "images/vdr-open_0003_3.jpg",
+   "images/vdr-open_0003_4.jpg",
+   "images/vdr-open_0003_5.jpg"
+  ]
+ },
+ {
+  "id": "A_20141213_2700_02_clip_003_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> which part of the frame does the plate leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr-open_0004_0.jpg",
+   "images/vdr-open_0004_1.jpg",
+   "images/vdr-open_0004_2.jpg",
+   "images/vdr-open_0004_3.jpg",
+   "images/vdr-open_0004_4.jpg",
+   "images/vdr-open_0004_5.jpg"
+  ]
+ }
+]

@@ -1,0 +1,97 @@
+[
+ {
+  "id": "picture_vocabulary_000756",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'street' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0000_0.png",
+   "images/picture_vocabulary_0000_1.png",
+   "images/picture_vocabulary_0000_2.png",
+   "images/picture_vocabulary_0000_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_001431",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'coffee' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0001_0.png",
+   "images/picture_vocabulary_0001_1.png",
+   "images/picture_vocabulary_0001_2.png",
+   "images/picture_vocabulary_0001_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000509",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'towel' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0002_0.png",
+   "images/picture_vocabulary_0002_1.png",
+   "images/picture_vocabulary_0002_2.png",
+   "images/picture_vocabulary_0002_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_001452",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'feet' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0003_0.png",
+   "images/picture_vocabulary_0003_1.png",
+   "images/picture_vocabulary_0003_2.png",
+   "images/picture_vocabulary_0003_3.png"
+  ]
+ },
+ {
+  "id": "picture_vocabulary_000296",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image>\n Touch the image of 'puzzle' (A) the first image (B) the second image (C) the third image (D) the fourth image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocabulary_0004_0.png",
+   "images/picture_vocabulary_0004_1.png",
+   "images/picture_vocabulary_0004_2.png",
+   "images/picture_vocabulary_0004_3.png"
+  ]
+ }
+]

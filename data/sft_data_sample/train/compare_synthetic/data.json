@@ -1,0 +1,87 @@
+[
+ {
+  "id": "compare_synthetic_11199",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of rug? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0000_0.jpeg",
+   "images/compare_synthetic_0000_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_10617",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of mop? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0001_0.jpeg",
+   "images/compare_synthetic_0001_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_1169",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of saucepan? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0002_0.jpeg",
+   "images/compare_synthetic_0002_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_9980",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of coffeetable? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0003_0.jpeg",
+   "images/compare_synthetic_0003_1.jpeg"
+  ]
+ },
+ {
+  "id": "compare_synthetic_10403",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of pier? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0004_0.jpeg",
+   "images/compare_synthetic_0004_1.jpeg"
+  ]
+ }
+]

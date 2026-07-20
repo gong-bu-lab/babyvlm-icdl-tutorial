@@ -1,0 +1,82 @@
+[
+ {
+  "id": "nih_picture_vocab_task_2",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Stick' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_selected_0000_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_1",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Tractor' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_selected_0001_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_5",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Carry' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_selected_0002_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_13",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Roof' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_selected_0003_0.PNG"
+  ]
+ },
+ {
+  "id": "nih_picture_vocab_task_14",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Touch the image of 'Mine' (A) top left image (B) top right image (C) bottom left image (D) bottom right image."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/picture_vocab_selected_0004_0.PNG"
+  ]
+ }
+]

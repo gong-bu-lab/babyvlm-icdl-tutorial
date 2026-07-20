@@ -1,0 +1,112 @@
+[
+ {
+  "bb": [
+   0.0,
+   0.0,
+   640.0,
+   480.0
+  ],
+  "id": "count_1519",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the stone. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0000_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   25.0,
+   92.0,
+   448.0,
+   388.0
+  ],
+  "id": "count_6224",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the egg. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0001_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   0.0,
+   0.0,
+   601.0,
+   480.0
+  ],
+  "id": "count_1584",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the window blinds. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/localize_0002_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   0.0,
+   0.0,
+   640.0,
+   480.0
+  ],
+  "id": "count_5881",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the rug/carpet. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0003_0.jpeg"
+  ]
+ },
+ {
+  "bb": [
+   19.0,
+   0.0,
+   621.0,
+   480.0
+  ],
+  "id": "count_5635",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Point at the body. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+   },
+   {
+    "from": "gpt",
+    "value": "D"
+   }
+  ],
+  "image": [
+   "images/localize_0004_0.jpeg"
+  ]
+ }
+]

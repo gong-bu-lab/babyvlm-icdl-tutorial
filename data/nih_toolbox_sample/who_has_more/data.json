@@ -1,0 +1,92 @@
+[
+ {
+  "id": "compare_12",
+  "notes": "",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of umbralla? (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/who_has_more_0000_0.jpg",
+   "images/who_has_more_0000_1.jpg"
+  ]
+ },
+ {
+  "id": "compare_3",
+  "notes": "",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of key? (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/who_has_more_0001_0.jpg",
+   "images/who_has_more_0001_1.jpg"
+  ]
+ },
+ {
+  "id": "compare_11",
+  "notes": "",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of flower? (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/who_has_more_0002_0.jpg",
+   "images/who_has_more_0002_1.jpg"
+  ]
+ },
+ {
+  "id": "compare_21",
+  "notes": "",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of can? (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/who_has_more_0003_0.jpg",
+   "images/who_has_more_0003_1.jpg"
+  ]
+ },
+ {
+  "id": "compare_19",
+  "notes": "",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of knot? (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/who_has_more_0004_0.jpg",
+   "images/who_has_more_0004_1.jpg"
+  ]
+ }
+]

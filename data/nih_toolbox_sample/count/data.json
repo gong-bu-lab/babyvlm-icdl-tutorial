@@ -1,0 +1,82 @@
+[
+ {
+  "id": "count_5",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> How many of donut do you see?"
+   },
+   {
+    "from": "gpt",
+    "value": "8"
+   }
+  ],
+  "image": [
+   "images/count_0000_0.jpg"
+  ]
+ },
+ {
+  "id": "count_0",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> How many of camera do you see?"
+   },
+   {
+    "from": "gpt",
+    "value": "1"
+   }
+  ],
+  "image": [
+   "images/count_0001_0.jpg"
+  ]
+ },
+ {
+  "id": "count_4",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> How many of box do you see?"
+   },
+   {
+    "from": "gpt",
+    "value": "5"
+   }
+  ],
+  "image": [
+   "images/count_0002_0.jpg"
+  ]
+ },
+ {
+  "id": "count_2",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> How many of tree do you see?"
+   },
+   {
+    "from": "gpt",
+    "value": "2"
+   }
+  ],
+  "image": [
+   "images/count_0003_0.jpg"
+  ]
+ },
+ {
+  "id": "count_1",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> How many of apple do you see?"
+   },
+   {
+    "from": "gpt",
+    "value": "3"
+   }
+  ],
+  "image": [
+   "images/count_0004_0.jpg"
+  ]
+ }
+]

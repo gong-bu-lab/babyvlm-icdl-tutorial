@@ -1,0 +1,87 @@
+[
+ {
+  "id": "count_3",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of jar? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0000_0.jpeg",
+   "images/compare_synthetic_0000_1.jpeg"
+  ]
+ },
+ {
+  "id": "count_3",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of cup? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0001_0.jpeg",
+   "images/compare_synthetic_0001_1.jpeg"
+  ]
+ },
+ {
+  "id": "count_1",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of hammer? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0002_0.jpeg",
+   "images/compare_synthetic_0002_1.jpeg"
+  ]
+ },
+ {
+  "id": "count_6",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of hammer? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0003_0.jpeg",
+   "images/compare_synthetic_0003_1.jpeg"
+  ]
+ },
+ {
+  "id": "count_1",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Which image has more of telephone? Answer (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/compare_synthetic_0004_0.jpeg",
+   "images/compare_synthetic_0004_1.jpeg"
+  ]
+ }
+]

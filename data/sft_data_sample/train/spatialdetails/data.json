@@ -1,0 +1,97 @@
+[
+ {
+  "id": "spatialdetails_9109",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following contains exactly this object? (A) <image> (B) <image> (C) <image>. Pay attention to details and give only a letter A-C."
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/spatialdetails_0000_0.jpeg",
+   "images/spatialdetails_0000_1.jpg",
+   "images/spatialdetails_0000_2.jpg",
+   "images/spatialdetails_0000_3.jpg"
+  ]
+ },
+ {
+  "id": "spatialdetails_14857",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following contains exactly this object? (A) <image> (B) <image> (C) <image>. Pay attention to details and give only a letter A-C."
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/spatialdetails_0001_0.jpeg",
+   "images/spatialdetails_0001_1.jpg",
+   "images/spatialdetails_0001_2.jpg",
+   "images/spatialdetails_0001_3.jpg"
+  ]
+ },
+ {
+  "id": "spatialdetails_20831",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following contains exactly this object? (A) <image> (B) <image> (C) <image>. Pay attention to details and give only a letter A-C."
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/spatialdetails_0002_0.jpeg",
+   "images/spatialdetails_0002_1.jpg",
+   "images/spatialdetails_0002_2.jpg",
+   "images/spatialdetails_0002_3.jpg"
+  ]
+ },
+ {
+  "id": "spatialdetails_11955",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following contains exactly this object? (A) <image> (B) <image> (C) <image>. Pay attention to details and give only a letter A-C."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/spatialdetails_0003_0.jpeg",
+   "images/spatialdetails_0003_1.jpg",
+   "images/spatialdetails_0003_2.jpg",
+   "images/spatialdetails_0003_3.jpg"
+  ]
+ },
+ {
+  "id": "spatialdetails_5329",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image> Which of the following contains exactly this object? (A) <image> (B) <image> (C) <image>. Pay attention to details and give only a letter A-C."
+   },
+   {
+    "from": "gpt",
+    "value": "C"
+   }
+  ],
+  "image": [
+   "images/spatialdetails_0004_0.jpeg",
+   "images/spatialdetails_0004_1.jpg",
+   "images/spatialdetails_0004_2.jpg",
+   "images/spatialdetails_0004_3.jpg"
+  ]
+ }
+]
