@@ -11,8 +11,8 @@
     (function () {
       try {
         var saved = localStorage.getItem('theme');
-        var dark = saved ? saved === 'dark'
-          : window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        // Default to light; only go dark if the user explicitly chose it.
+        var dark = saved === 'dark';
         if (dark) document.documentElement.setAttribute('data-theme', 'dark');
       } catch (e) {}
     })();
@@ -1510,15 +1510,7 @@ document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal
     try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
   });
 
-  // follow the OS setting until the user makes an explicit choice
-  if (mql) {
-    var onChange = function (e) {
-      try { if (localStorage.getItem('theme')) return; } catch (_) {}
-      apply(e.matches);
-    };
-    if (mql.addEventListener) mql.addEventListener('change', onChange);
-    else if (mql.addListener) mql.addListener(onChange);
-  }
+  // Light is the default; the OS setting is intentionally not followed.
 })();
 
 // ── Init ───────────────────────────────────────────────────
