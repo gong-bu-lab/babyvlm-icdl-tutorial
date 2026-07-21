@@ -1305,7 +1305,7 @@ function renderSplitTabs() {
     const b = document.createElement('button');
     b.className = 'tab split-tab' + (sp === state.split ? ' active' : '');
     b.textContent = sp;
-    b.onclick = () => { state.split = sp; loadTask(); };
+    b.onclick = () => { state.split = sp; renderSplitTabs(); loadTask(); };
     splitTabs.appendChild(b);
   }
 }
