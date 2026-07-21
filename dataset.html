@@ -1291,7 +1291,7 @@ function renderSourceTabs() {
     const b = document.createElement('button');
     b.className = 'tab' + (key === state.source ? ' active' : '');
     b.textContent = cfg.label;
-    b.onclick = () => { state.source = key; state.task = null; renderAll(); };
+    b.onclick = () => { state.source = key; state.task = null; state.split = 'train'; renderAll(); };
     sourceTabs.appendChild(b);
   }
 }
