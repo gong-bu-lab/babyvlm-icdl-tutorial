@@ -907,8 +907,8 @@
       <h1 class="anim anim-2"><em>BabyVLM-v2</em> Data Explorer</h1>
     </div>
     <p class="tagline anim anim-3">
-      Browse real demo samples across the three data sources — egocentric Ego4D,
-      SAYCam, and the NIH Baby Toolbox® evaluation. Pick a
+      Browse real demo samples across the four data sources — egocentric SAYCam,
+      Ego4D, and BabyView, plus the NIH Baby Toolbox® evaluation. Pick a
       source and task, then open any sample to see its full vision–language conversation.
     </p>
   </div>
@@ -927,9 +927,10 @@
         The samples below are a curated subset (~5 items per task) of the full corpus.
       </p>
       <div class="stats">
-        <div class="stat"><div class="stat-num">3</div><div class="stat-label">Data sources</div></div>
-        <div class="stat"><div class="stat-num">Ego4D</div><div class="stat-label">Egocentric eval set</div></div>
+        <div class="stat"><div class="stat-num">4</div><div class="stat-label">Data sources</div></div>
         <div class="stat"><div class="stat-num">SAYCam</div><div class="stat-label">train / val / test</div></div>
+        <div class="stat"><div class="stat-num">Ego4D</div><div class="stat-label">Egocentric eval set</div></div>
+        <div class="stat"><div class="stat-num">BabyView</div><div class="stat-label">train / val / test</div></div>
         <div class="stat"><div class="stat-num">NIH</div><div class="stat-label">Baby Toolbox® eval</div></div>
       </div>
     </div>
@@ -997,24 +998,33 @@ const TASK_INFO = {
   'compare_synthetic':  { label: 'Compare (synthetic)',  desc: 'Quantity comparison — which image has more of the object (synthetic).' },
   'compare_real':       { label: 'Compare (real)',       desc: 'Quantity comparison — which image has more of the object (naturalistic).' },
   'who_has_more':       { label: 'Who has more',         desc: 'Quantity comparison — which image contains more of the object.' },
+  'subitize':           { label: 'Subitize',             desc: 'Subitizing — rapidly report how many of the object appear in the frame.' },
+  'whohasmore_synthetic': { label: 'Who has more',        desc: 'Quantity comparison — which image has more of the object (synthetic).' },
 };
 
 // ── Source / task configuration ────────────────────────────
 const EGO4D_TASKS = ['count','memory','vdr-binary','vdr-open','localize','leftright','picture_vocabulary','spatialdetails','compare_synthetic','compare_real'];
 const NIH_TASKS   = ['count','memory','picture_vocab','picture_vocab_selected','spatial','vdr','who_has_more'];
+const BABYVIEW_TASKS = ['count','subitize','localize','leftright','whohasmore_synthetic'];
 
 const SOURCES = {
+  sft: {
+    label: 'SAYCam',
+    tasks: EGO4D_TASKS,
+    splits: ['train','val','test'],
+    base: (task, split) => `data/sft_data_sample/${split}/${task}`,
+  },
   ego4d: {
     label: 'Ego4D',
     tasks: EGO4D_TASKS,
     splits: null,
     base: (task) => `data/ego4d_sample/${task}`,
   },
-  sft: {
-    label: 'SAYCam',
-    tasks: EGO4D_TASKS,
+  babyview: {
+    label: 'BabyView',
+    tasks: BABYVIEW_TASKS,
     splits: ['train','val','test'],
-    base: (task, split) => `data/sft_data_sample/${split}/${task}`,
+    base: (task, split) => `data/babyview_sample/${split}/${task}`,
   },
   nih: {
     label: 'NIH Toolbox',
@@ -1028,7 +1038,7 @@ const SOURCES = {
 TASK_INFO['vdr'] = { label: 'VDR', desc: 'Visual delayed response — track the object across frames and report its motion.' };
 
 // ── State ──────────────────────────────────────────────────
-const state = { source: 'ego4d', split: 'train', task: null };
+const state = { source: 'sft', split: 'train', task: null };
 
 // ── Elements ───────────────────────────────────────────────
 const sourceTabs = document.getElementById('sourceTabs');

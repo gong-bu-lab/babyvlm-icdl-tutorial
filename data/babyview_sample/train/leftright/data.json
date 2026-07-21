@@ -1,0 +1,97 @@
+[
+  {
+    "id": "leftright_0",
+    "image": [
+      "images/leftright_0000_0.jpg",
+      "images/leftright_0000_1.jpeg",
+      "images/leftright_0000_2.jpeg",
+      "images/leftright_0000_3.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ]
+  },
+  {
+    "id": "leftright_1",
+    "image": [
+      "images/leftright_0001_0.jpg",
+      "images/leftright_0001_1.jpeg",
+      "images/leftright_0001_2.jpg",
+      "images/leftright_0001_3.jpeg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ]
+  },
+  {
+    "id": "leftright_2",
+    "image": [
+      "images/leftright_0002_0.jpg",
+      "images/leftright_0002_1.jpg",
+      "images/leftright_0002_2.jpeg",
+      "images/leftright_0002_3.jpeg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ]
+  },
+  {
+    "id": "leftright_3",
+    "image": [
+      "images/leftright_0003_0.jpg",
+      "images/leftright_0003_1.jpeg",
+      "images/leftright_0003_2.jpeg",
+      "images/leftright_0003_3.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ]
+  },
+  {
+    "id": "leftright_4",
+    "image": [
+      "images/leftright_0004_0.jpg",
+      "images/leftright_0004_1.jpeg",
+      "images/leftright_0004_2.jpeg",
+      "images/leftright_0004_3.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ]
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "bb": [
+      61,
+      666,
+      759,
+      1156
+    ],
+    "id": "localize_0",
+    "image": [
+      "images/localize_0000_0.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Point at the TV. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ]
+  },
+  {
+    "bb": [
+      15,
+      760,
+      372,
+      1023
+    ],
+    "id": "localize_1",
+    "image": [
+      "images/localize_0001_0.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Point at the TV. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ]
+  },
+  {
+    "bb": [
+      0,
+      114,
+      352,
+      565
+    ],
+    "id": "localize_2",
+    "image": [
+      "images/localize_0002_0.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Point at the TV. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ]
+  },
+  {
+    "bb": [
+      993,
+      600,
+      1080,
+      735
+    ],
+    "id": "localize_3",
+    "image": [
+      "images/localize_0003_0.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Point at the TV. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ]
+  },
+  {
+    "bb": [
+      343,
+      913,
+      409,
+      967
+    ],
+    "id": "localize_4",
+    "image": [
+      "images/localize_0004_0.jpg"
+    ],
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Point at the TV. Is it in the (A) top left or (B) top right or (C) bottom left or (D) bottom right of the image?"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ]
+  }
+]
