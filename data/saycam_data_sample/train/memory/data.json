@@ -1,0 +1,1399 @@
+[
+ {
+  "id": "memory_task_3863",
+  "labels": [
+   [
+    "windows"
+   ],
+   [
+    "windows",
+    "flour"
+   ],
+   [
+    "poster",
+    "flour"
+   ],
+   [
+    "duck",
+    "poster"
+   ],
+   [
+    "duck",
+    "case"
+   ],
+   [
+    "sofa",
+    "windows"
+   ],
+   [
+    "duck",
+    "pavilion"
+   ],
+   [
+    "cords",
+    "flour"
+   ],
+   [
+    "basin",
+    "case"
+   ],
+   [
+    "shelf",
+    "poster"
+   ],
+   [
+    "rail",
+    "case"
+   ],
+   [
+    "thermos",
+    "duck"
+   ],
+   [
+    "flour",
+    "scooter"
+   ],
+   [
+    "windows",
+    "sand"
+   ],
+   [
+    "poster",
+    "armchair"
+   ]
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/memory_0000_0.jpg",
+   "images/memory_0000_1.jpg",
+   "images/memory_0000_2.jpg",
+   "images/memory_0000_3.jpg",
+   "images/memory_0000_4.jpg",
+   "images/memory_0000_5.jpg",
+   "images/memory_0000_6.jpg",
+   "images/memory_0000_7.jpg",
+   "images/memory_0000_8.jpg",
+   "images/memory_0000_9.jpg",
+   "images/memory_0000_10.jpg",
+   "images/memory_0000_11.jpg",
+   "images/memory_0000_12.jpg",
+   "images/memory_0000_13.jpg",
+   "images/memory_0000_14.jpg",
+   "images/memory_0000_15.jpg",
+   "images/memory_0000_16.jpg",
+   "images/memory_0000_17.jpg",
+   "images/memory_0000_18.jpg",
+   "images/memory_0000_19.jpg",
+   "images/memory_0000_20.jpg",
+   "images/memory_0000_21.jpg",
+   "images/memory_0000_22.jpg",
+   "images/memory_0000_23.jpg",
+   "images/memory_0000_24.jpg",
+   "images/memory_0000_25.jpg",
+   "images/memory_0000_26.jpg",
+   "images/memory_0000_27.jpg",
+   "images/memory_0000_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_2829_aug",
+  "labels": [
+   [
+    "legs"
+   ],
+   [
+    "legs",
+    "hoop"
+   ],
+   [
+    "counter",
+    "hoop"
+   ],
+   [
+    "counter",
+    "bandana"
+   ],
+   [
+    "milk",
+    "bandana"
+   ],
+   [
+    "waffles",
+    "legs"
+   ],
+   [
+    "counter",
+    "graffiti"
+   ],
+   [
+    "tire",
+    "bandana"
+   ],
+   [
+    "hoop",
+    "vacuum"
+   ],
+   [
+    "bubble",
+    "milk"
+   ],
+   [
+    "bandana",
+    "boot"
+   ],
+   [
+    "bath",
+    "counter"
+   ],
+   [
+    "blender",
+    "legs"
+   ],
+   [
+    "sign",
+    "hoop"
+   ],
+   [
+    "milk",
+    "drain"
+   ]
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/memory_0001_0.jpg",
+   "images/memory_0001_1.jpg",
+   "images/memory_0001_2.jpg",
+   "images/memory_0001_3.jpg",
+   "images/memory_0001_4.jpg",
+   "images/memory_0001_5.jpg",
+   "images/memory_0001_6.jpg",
+   "images/memory_0001_7.jpg",
+   "images/memory_0001_8.jpg",
+   "images/memory_0001_9.jpg",
+   "images/memory_0001_10.jpg",
+   "images/memory_0001_11.jpg",
+   "images/memory_0001_12.jpg",
+   "images/memory_0001_13.jpg",
+   "images/memory_0001_14.jpg",
+   "images/memory_0001_15.jpg",
+   "images/memory_0001_16.jpg",
+   "images/memory_0001_17.jpg",
+   "images/memory_0001_18.jpg",
+   "images/memory_0001_19.jpg",
+   "images/memory_0001_20.jpg",
+   "images/memory_0001_21.jpg",
+   "images/memory_0001_22.jpg",
+   "images/memory_0001_23.jpg",
+   "images/memory_0001_24.jpg",
+   "images/memory_0001_25.jpg",
+   "images/memory_0001_26.jpg",
+   "images/memory_0001_27.jpg",
+   "images/memory_0001_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_3373",
+  "labels": [
+   [
+    "fridge"
+   ],
+   [
+    "fridge",
+    "keyboard"
+   ],
+   [
+    "keyboard",
+    "glove"
+   ],
+   [
+    "pillow",
+    "glove"
+   ],
+   [
+    "bedroom",
+    "pillow"
+   ],
+   [
+    "bedroom",
+    "sunlight"
+   ],
+   [
+    "truck",
+    "fridge"
+   ],
+   [
+    "glove",
+    "shelter"
+   ],
+   [
+    "bathroom",
+    "keyboard"
+   ],
+   [
+    "pillow",
+    "desk"
+   ],
+   [
+    "keyboard",
+    "pen"
+   ],
+   [
+    "pillow",
+    "shirt"
+   ],
+   [
+    "drumsticks",
+    "glove"
+   ],
+   [
+    "soccer",
+    "fridge"
+   ],
+   [
+    "grill",
+    "bedroom"
+   ]
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/memory_0002_0.jpg",
+   "images/memory_0002_1.jpg",
+   "images/memory_0002_2.jpg",
+   "images/memory_0002_3.jpg",
+   "images/memory_0002_4.jpg",
+   "images/memory_0002_5.jpg",
+   "images/memory_0002_6.jpg",
+   "images/memory_0002_7.jpg",
+   "images/memory_0002_8.jpg",
+   "images/memory_0002_9.jpg",
+   "images/memory_0002_10.jpg",
+   "images/memory_0002_11.jpg",
+   "images/memory_0002_12.jpg",
+   "images/memory_0002_13.jpg",
+   "images/memory_0002_14.jpg",
+   "images/memory_0002_15.jpg",
+   "images/memory_0002_16.jpg",
+   "images/memory_0002_17.jpg",
+   "images/memory_0002_18.jpg",
+   "images/memory_0002_19.jpg",
+   "images/memory_0002_20.jpg",
+   "images/memory_0002_21.jpg",
+   "images/memory_0002_22.jpg",
+   "images/memory_0002_23.jpg",
+   "images/memory_0002_24.jpg",
+   "images/memory_0002_25.jpg",
+   "images/memory_0002_26.jpg",
+   "images/memory_0002_27.jpg",
+   "images/memory_0002_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_1687",
+  "labels": [
+   [
+    "cords"
+   ],
+   [
+    "cords",
+    "railroads"
+   ],
+   [
+    "page",
+    "railroads"
+   ],
+   [
+    "page",
+    "blueberries"
+   ],
+   [
+    "blueberries",
+    "statue"
+   ],
+   [
+    "page",
+    "buildings"
+   ],
+   [
+    "keyboards",
+    "cords"
+   ],
+   [
+    "blueberries",
+    "crib"
+   ],
+   [
+    "statue",
+    "dirt"
+   ],
+   [
+    "railroads",
+    "money"
+   ],
+   [
+    "blueberries",
+    "flower"
+   ],
+   [
+    "statue",
+    "bedroom"
+   ],
+   [
+    "cap",
+    "railroads"
+   ],
+   [
+    "shrub",
+    "page"
+   ],
+   [
+    "cords",
+    "walkway"
+   ]
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/memory_0003_0.jpg",
+   "images/memory_0003_1.jpg",
+   "images/memory_0003_2.jpg",
+   "images/memory_0003_3.jpg",
+   "images/memory_0003_4.jpg",
+   "images/memory_0003_5.jpg",
+   "images/memory_0003_6.jpg",
+   "images/memory_0003_7.jpg",
+   "images/memory_0003_8.jpg",
+   "images/memory_0003_9.jpg",
+   "images/memory_0003_10.jpg",
+   "images/memory_0003_11.jpg",
+   "images/memory_0003_12.jpg",
+   "images/memory_0003_13.jpg",
+   "images/memory_0003_14.jpg",
+   "images/memory_0003_15.jpg",
+   "images/memory_0003_16.jpg",
+   "images/memory_0003_17.jpg",
+   "images/memory_0003_18.jpg",
+   "images/memory_0003_19.jpg",
+   "images/memory_0003_20.jpg",
+   "images/memory_0003_21.jpg",
+   "images/memory_0003_22.jpg",
+   "images/memory_0003_23.jpg",
+   "images/memory_0003_24.jpg",
+   "images/memory_0003_25.jpg",
+   "images/memory_0003_26.jpg",
+   "images/memory_0003_27.jpg",
+   "images/memory_0003_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_321_aug",
+  "labels": [
+   [
+    "cushion"
+   ],
+   [
+    "toothpaste",
+    "cushion"
+   ],
+   [
+    "pavilion",
+    "toothpaste"
+   ],
+   [
+    "pig",
+    "pavilion"
+   ],
+   [
+    "lotion",
+    "pig"
+   ],
+   [
+    "ottoman",
+    "pavilion"
+   ],
+   [
+    "pig",
+    "storage"
+   ],
+   [
+    "toothpaste",
+    "wheel"
+   ],
+   [
+    "keys",
+    "lotion"
+   ],
+   [
+    "sofa",
+    "cushion"
+   ],
+   [
+    "cushion",
+    "puzzle"
+   ],
+   [
+    "headlight",
+    "pavilion"
+   ],
+   [
+    "toothpaste",
+    "soil"
+   ],
+   [
+    "pig",
+    "bag"
+   ],
+   [
+    "snack",
+    "lotion"
+   ]
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   }
+  ],
+  "image": [
+   "images/memory_0004_0.jpg",
+   "images/memory_0004_1.jpg",
+   "images/memory_0004_2.jpg",
+   "images/memory_0004_3.jpg",
+   "images/memory_0004_4.jpg",
+   "images/memory_0004_5.jpg",
+   "images/memory_0004_6.jpg",
+   "images/memory_0004_7.jpg",
+   "images/memory_0004_8.jpg",
+   "images/memory_0004_9.jpg",
+   "images/memory_0004_10.jpg",
+   "images/memory_0004_11.jpg",
+   "images/memory_0004_12.jpg",
+   "images/memory_0004_13.jpg",
+   "images/memory_0004_14.jpg",
+   "images/memory_0004_15.jpg",
+   "images/memory_0004_16.jpg",
+   "images/memory_0004_17.jpg",
+   "images/memory_0004_18.jpg",
+   "images/memory_0004_19.jpg",
+   "images/memory_0004_20.jpg",
+   "images/memory_0004_21.jpg",
+   "images/memory_0004_22.jpg",
+   "images/memory_0004_23.jpg",
+   "images/memory_0004_24.jpg",
+   "images/memory_0004_25.jpg",
+   "images/memory_0004_26.jpg",
+   "images/memory_0004_27.jpg",
+   "images/memory_0004_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_2674",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/memory_0005_0.jpg",
+   "images/memory_0005_1.jpg",
+   "images/memory_0005_2.jpg",
+   "images/memory_0005_3.jpg",
+   "images/memory_0005_4.jpg",
+   "images/memory_0005_5.jpg",
+   "images/memory_0005_6.jpg",
+   "images/memory_0005_7.jpg",
+   "images/memory_0005_8.jpg",
+   "images/memory_0005_9.jpg",
+   "images/memory_0005_10.jpg",
+   "images/memory_0005_11.jpg",
+   "images/memory_0005_12.jpg",
+   "images/memory_0005_13.jpg",
+   "images/memory_0005_14.jpg",
+   "images/memory_0005_15.jpg",
+   "images/memory_0005_16.jpg",
+   "images/memory_0005_17.jpg",
+   "images/memory_0005_18.jpg",
+   "images/memory_0005_19.jpg",
+   "images/memory_0005_20.jpg",
+   "images/memory_0005_21.jpg",
+   "images/memory_0005_22.jpg",
+   "images/memory_0005_23.jpg",
+   "images/memory_0005_24.jpg",
+   "images/memory_0005_25.jpg",
+   "images/memory_0005_26.jpg",
+   "images/memory_0005_27.jpg",
+   "images/memory_0005_28.jpg"
+  ]
+ },
+ {
+  "id": "memory_task_4713",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "Touch the new image. (A) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "A"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   },
+   {
+    "from": "human",
+    "value": "Let's try more. Touch the new image. (A) <image> (B) <image>"
+   },
+   {
+    "from": "gpt",
+    "value": "B"
+   }
+  ],
+  "image": [
+   "images/memory_0006_0.jpg",
+   "images/memory_0006_1.jpg",
+   "images/memory_0006_2.jpg",
+   "images/memory_0006_3.jpg",
+   "images/memory_0006_4.jpg",
+   "images/memory_0006_5.jpg",
+   "images/memory_0006_6.jpg",
+   "images/memory_0006_7.jpg",
+   "images/memory_0006_8.jpg",
+   "images/memory_0006_9.jpg",
+   "images/memory_0006_10.jpg",
+   "images/memory_0006_11.jpg",
+   "images/memory_0006_12.jpg",
+   "images/memory_0006_13.jpg",
+   "images/memory_0006_14.jpg",
+   "images/memory_0006_15.jpg",
+   "images/memory_0006_16.jpg",
+   "images/memory_0006_17.jpg",
+   "images/memory_0006_18.jpg",
+   "images/memory_0006_19.jpg",
+   "images/memory_0006_20.jpg",
+   "images/memory_0006_21.jpg",
+   "images/memory_0006_22.jpg",
+   "images/memory_0006_23.jpg",
+   "images/memory_0006_24.jpg",
+   "images/memory_0006_25.jpg",
+   "images/memory_0006_26.jpg",
+   "images/memory_0006_27.jpg",
+   "images/memory_0006_28.jpg"
+  ]
+ }
+]

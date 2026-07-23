@@ -1,0 +1,87 @@
+[
+  {
+    "id": "compare_synthetic_832",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more toykitchens? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0000_0.jpeg",
+      "images/compare_synthetic_0000_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_994",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more charts? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0001_0.jpeg",
+      "images/compare_synthetic_0001_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_985",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more knifeblocks? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0002_0.jpeg",
+      "images/compare_synthetic_0002_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_437",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more cupwithstraws? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0003_0.jpeg",
+      "images/compare_synthetic_0003_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_1770",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more colorings? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0004_0.jpeg",
+      "images/compare_synthetic_0004_1.jpeg"
+    ]
+  }
+]

@@ -62,7 +62,8 @@
    "images/vdr_0000_47.png",
    "images/vdr_0000_48.png",
    "images/vdr_0000_49.png"
-  ]
+  ],
+  "gif": "images/vdr_0000.gif"
  },
  {
   "id": "nih_vdr_image_task_3",
@@ -127,7 +128,8 @@
    "images/vdr_0001_47.png",
    "images/vdr_0001_48.png",
    "images/vdr_0001_49.png"
-  ]
+  ],
+  "gif": "images/vdr_0001.gif"
  },
  {
   "id": "nih_vdr_image_task_8",
@@ -192,7 +194,8 @@
    "images/vdr_0002_47.png",
    "images/vdr_0002_48.png",
    "images/vdr_0002_49.png"
-  ]
+  ],
+  "gif": "images/vdr_0002.gif"
  },
  {
   "id": "nih_vdr_image_task_2",
@@ -257,7 +260,8 @@
    "images/vdr_0003_47.png",
    "images/vdr_0003_48.png",
    "images/vdr_0003_49.png"
-  ]
+  ],
+  "gif": "images/vdr_0003.gif"
  },
  {
   "id": "nih_vdr_image_task_5",
@@ -322,6 +326,7 @@
    "images/vdr_0004_47.png",
    "images/vdr_0004_48.png",
    "images/vdr_0004_49.png"
-  ]
+  ],
+  "gif": "images/vdr_0004.gif"
  }
 ]

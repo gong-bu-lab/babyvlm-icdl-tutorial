@@ -1,0 +1,67 @@
+[
+ {
+  "id": "A_20131127_1414_02_clip_000",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image> does the tv leave the frame through the left side of the frame or the right side of the frame? respond ONLY with 'left' or 'right'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr_0000_0.jpg",
+   "images/vdr_0000_1.jpg",
+   "images/vdr_0000_2.jpg",
+   "images/vdr_0000_3.jpg",
+   "images/vdr_0000_4.jpg"
+  ],
+  "gif": "images/vdr_0000.gif"
+ },
+ {
+  "id": "A_20140704_2121_02_clip_006",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image> does the computer leave the frame through the bottom side of the frame or the top side of the frame? respond ONLY with 'bottom' or 'top'."
+   },
+   {
+    "from": "gpt",
+    "value": "top"
+   }
+  ],
+  "image": [
+   "images/vdr_0001_0.jpg",
+   "images/vdr_0001_1.jpg",
+   "images/vdr_0001_2.jpg",
+   "images/vdr_0001_3.jpg",
+   "images/vdr_0001_4.jpg",
+   "images/vdr_0001_5.jpg",
+   "images/vdr_0001_6.jpg"
+  ],
+  "gif": "images/vdr_0001.gif"
+ },
+ {
+  "id": "Y_20190612_1529_02_clip_014",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image> does the toy leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "right"
+   }
+  ],
+  "image": [
+   "images/vdr_0002_0.jpg",
+   "images/vdr_0002_1.jpg",
+   "images/vdr_0002_2.jpg",
+   "images/vdr_0002_3.jpg",
+   "images/vdr_0002_4.jpg"
+  ],
+  "gif": "images/vdr_0002.gif"
+ }
+]

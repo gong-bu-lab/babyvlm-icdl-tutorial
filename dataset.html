@@ -734,6 +734,92 @@
     .img-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--sp-2); }
     .img-strip:first-child { margin-top: 0; }
 
+    /* ── Sample layout + multiple-choice (structure ported from BabyVLM repo,
+          styled with the tutorial's own palette so it stays theme/dark aware) ── */
+    .dx-sample { display: flex; flex-direction: column; gap: var(--sp-5); }
+    .dx-col-label {
+      font-family: var(--font-sans); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+      margin-bottom: var(--sp-3); display: flex; align-items: center; gap: 7px;
+    }
+    .dx-col-label::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--faint); }
+    .dx-col-right .dx-col-label::before, .dx-full-grid .dx-col-label::before { background: var(--accent); }
+    .dx-prompt-text {
+      font-family: var(--font-display); font-size: 19px; line-height: 1.55; color: var(--ink);
+      background: var(--surface-2); border: 1px solid var(--border); border-radius: var(--radius-lg);
+      padding: 14px 18px;
+    }
+    .dx-body { display: flex; flex-wrap: wrap; gap: var(--sp-6); align-items: flex-start; }
+    .dx-stimulus { flex: 0 1 auto; max-width: 42%; }
+    .dx-stimulus img {
+      max-height: 300px; width: auto; max-width: 100%; object-fit: contain;
+      border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface-2); display: block;
+    }
+    .dx-stimulus .dx-seq-cap { margin-top: var(--sp-2); }
+    .dx-seq-cap {
+      font-family: var(--font-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 6px;
+    }
+    .dx-col-right { flex: 1 1 320px; min-width: 0; }
+    .dx-full-grid { width: 100%; }
+
+    .dx-choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: var(--sp-4); }
+    .dx-choice-card {
+      border: 1.5px solid var(--border); border-radius: var(--radius-lg); background: var(--surface);
+      overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    }
+    .dx-choice-card.correct {
+      border-color: var(--accent); box-shadow: 0 6px 20px -8px color-mix(in srgb, var(--accent), transparent 55%);
+    }
+    .dx-choice-thumb { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: var(--surface-2); display: block; }
+    .dx-choice-thumb.broken { object-fit: contain; padding: 12px; }
+    .dx-choice-foot { display: flex; align-items: center; gap: var(--sp-2); padding: 10px 12px; }
+    .dx-choice-card.correct .dx-choice-foot { background: var(--accent-tint); }
+    .dx-choice-badge {
+      font-family: var(--font-display); font-weight: 700; font-size: 14.5px; min-width: 26px; height: 26px;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      background: var(--surface-2); color: var(--ink-soft); border: 1px solid var(--border); flex-shrink: 0;
+    }
+    .dx-choice-card.correct .dx-choice-badge { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .dx-choice-text { font-size: 15.5px; color: var(--ink); line-height: 1.3; }
+    .dx-choice-card.correct .dx-choice-text { color: var(--accent-strong); font-weight: 700; }
+    .dx-choice-card.text-only .dx-choice-foot { padding: 14px; }
+    .dx-tick { color: var(--accent); font-weight: 700; font-size: 14px; flex-shrink: 0; margin-left: auto; }
+    .dx-answer-card {
+      font-family: var(--font-display); font-weight: 700; font-size: 28px; color: var(--accent-strong);
+      background: var(--accent-tint); border: 1.5px solid var(--accent); border-radius: var(--radius-lg);
+      padding: 20px 26px; text-align: center; word-break: break-word; display: inline-block;
+    }
+
+    /* Multi-turn (memory) sequential layout */
+    .dx-turn { margin-bottom: var(--sp-4); }
+    .dx-turn-role {
+      font-family: var(--font-sans); font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 7px; display: flex; align-items: center; gap: 7px;
+    }
+    .dx-turn-role::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--faint); }
+    .dx-human .dx-turn-role::before { background: var(--muted); }
+    .dx-gpt .dx-turn-role::before { background: var(--accent); }
+    .dx-bubble { font-size: 17px; padding: 13px 17px; border-radius: var(--radius-lg); line-height: 1.6; }
+    .dx-human .dx-bubble { background: var(--surface-2); color: var(--ink); border: 1px solid var(--border); border-bottom-left-radius: var(--radius); }
+    .dx-gpt .dx-bubble { background: var(--accent-tint); color: var(--accent-strong); border: 1px solid var(--gpt-border); font-weight: 700; border-bottom-left-radius: var(--radius); }
+    .dx-media-row { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-3); align-items: flex-start; }
+    .dx-media-cell { display: flex; flex-direction: column; align-items: center; gap: 7px; margin: 0; }
+    .dx-media-cell img {
+      height: 150px; width: auto; max-width: 100%; object-fit: contain;
+      border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface-2); display: block;
+    }
+    .dx-media-cell img.broken { height: 104px; padding: 8px; }
+    .dx-media-label {
+      font-family: var(--font-sans); font-size: 13px; font-weight: 700; color: var(--accent-strong);
+      background: var(--accent-tint); border-radius: 50px; padding: 2px 13px;
+    }
+    @media (max-width: 760px) {
+      .dx-stimulus { max-width: 100%; }
+      .dx-body { gap: var(--sp-4); }
+      .dx-choices { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+    }
+
     .note {
       font-size: 0.9rem;
       color: var(--muted);
@@ -908,7 +994,7 @@
     </div>
     <p class="tagline anim anim-3">
       Browse real demo samples across the four data sources — egocentric SAYCam,
-      Ego4D, and BabyView, plus the NIH Baby Toolbox® evaluation. Pick a
+      BabyView, and Ego4D, plus the NIH Baby Toolbox® evaluation. Pick a
       source and task, then open any sample to see its full vision–language conversation.
     </p>
   </div>
@@ -929,8 +1015,8 @@
       <div class="stats">
         <div class="stat"><div class="stat-num">4</div><div class="stat-label">Data sources</div></div>
         <div class="stat"><div class="stat-num">SAYCam</div><div class="stat-label">train / val / test</div></div>
-        <div class="stat"><div class="stat-num">Ego4D</div><div class="stat-label">Egocentric eval set</div></div>
         <div class="stat"><div class="stat-num">BabyView</div><div class="stat-label">train / val / test</div></div>
+        <div class="stat"><div class="stat-num">Ego4D</div><div class="stat-label">Egocentric eval set</div></div>
         <div class="stat"><div class="stat-num">NIH</div><div class="stat-label">Baby Toolbox® eval</div></div>
       </div>
     </div>
@@ -979,7 +1065,7 @@
     <a href="index.html">Tutorial home</a> &nbsp;·&nbsp;
     <a href="https://shawnking98.github.io/BabyVLM-v2/" target="_blank" rel="noopener">BabyVLM-v2</a>
     <br>
-    Website designed by Jason Liu
+    Designed by RISE Intern Jason Liu
   </div>
 </footer>
 
@@ -1007,26 +1093,30 @@ const TASK_INFO = {
 // ── Source / task configuration ────────────────────────────
 const EGO4D_TASKS = ['count','memory','vdr-binary','vdr-open','localize','leftright','picture_vocabulary','spatialdetails','compare_synthetic','compare_real'];
 const NIH_TASKS   = ['count','memory','picture_vocab','picture_vocab_selected','spatial','vdr','who_has_more'];
-const BABYVIEW_TASKS = ['count','subitize','localize','leftright','whohasmore_synthetic'];
+const BABYVIEW_TASKS = ['count','localize','leftright','whohasmore_synthetic'];
 
 const SOURCES = {
   sft: {
     label: 'SAYCam',
     tasks: EGO4D_TASKS,
     splits: ['train','val','test'],
-    base: (task, split) => `data/sft_data_sample/${split}/${task}`,
+    base: (task, split) => `data/saycam_data_sample/${split}/${task}`,
+  },
+  babyview: {
+    label: 'BabyView',
+    tasks: BABYVIEW_TASKS,
+    // The canonical site (index.html) has no babyview splits; it reads a single
+    // flat data/babyview_sample/${task}. We keep split tabs for display only and
+    // point every split at that same flat data, so the content is identical to
+    // the source (only the split-tab presentation differs).
+    splits: ['train','val','test'],
+    base: (task, split) => `data/babyview_sample/${task}`,
   },
   ego4d: {
     label: 'Ego4D',
     tasks: EGO4D_TASKS,
     splits: null,
     base: (task) => `data/ego4d_sample/${task}`,
-  },
-  babyview: {
-    label: 'BabyView',
-    tasks: BABYVIEW_TASKS,
-    splits: ['train','val','test'],
-    base: (task, split) => `data/babyview_sample/${split}/${task}`,
   },
   nih: {
     label: 'NIH Toolbox',
@@ -1038,6 +1128,80 @@ const SOURCES = {
 
 // vdr has its own task key in nih
 TASK_INFO['vdr'] = { label: 'VDR', desc: 'Visual delayed response — track the object across frames and report its motion.' };
+
+// ── Curated subset ─────────────────────────────────────────
+// The exact clips/videos chosen per source × task, matched to the
+// BabyVLM-v2 workshop Data Explorer (example.html). Values are item
+// indices into each task's data.json (≤3 hand-picked, face-screened
+// items per combo). 'sft' here is the SAYCam data (example.html calls
+// the same source 'saycam'). example.html's babyview had no splits, so
+// its babyview picks are applied to every split here.
+const CURATED = {
+  "sft/train/compare_real": [0, 2, 4],
+  "sft/train/compare_synthetic": [0, 1, 2],
+  "sft/train/count": [0, 1, 2],
+  "sft/train/leftright": [0, 1, 3],
+  "sft/train/localize": [0, 2, 3],
+  "sft/train/memory": [1, 5, 6],
+  "sft/train/picture_vocabulary": [1, 4],
+  "sft/train/spatialdetails": [1, 3, 4],
+  "sft/train/vdr-binary": [0, 1, 2],
+  "sft/train/vdr-open": [0, 1, 2],
+  "sft/val/compare_real": [5, 6, 7],
+  "sft/val/compare_synthetic": [0, 2, 3],
+  "sft/val/count": [0, 1, 2],
+  "sft/val/leftright": [1, 2, 3],
+  "sft/val/localize": [1, 2, 4],
+  "sft/val/memory": [0, 3, 4],
+  "sft/val/picture_vocabulary": [1, 2, 4],
+  "sft/val/spatialdetails": [0, 2, 3],
+  "sft/val/vdr-binary": [0, 1, 2],
+  "sft/val/vdr-open": [0, 1, 2],
+  "sft/test/compare_real": [0, 1, 2],
+  "sft/test/compare_synthetic": [0, 3, 4],
+  "sft/test/count": [0, 2, 3],
+  "sft/test/leftright": [1, 2, 3],
+  "sft/test/localize": [0, 1, 2],
+  "sft/test/memory": [1, 2, 5],
+  "sft/test/picture_vocabulary": [0, 1, 3],
+  "sft/test/spatialdetails": [1, 2, 4],
+  "sft/test/vdr-binary": [0, 1, 2],
+  "sft/test/vdr-open": [0, 1, 2],
+  "babyview/train/count": [0, 3, 6],
+  "babyview/train/leftright": [0, 3, 6],
+  "babyview/train/localize": [0, 3, 6],
+  "babyview/train/whohasmore_synthetic": [0, 3, 6],
+  "babyview/val/count": [0, 3, 6],
+  "babyview/val/leftright": [0, 3, 6],
+  "babyview/val/localize": [0, 3, 6],
+  "babyview/val/whohasmore_synthetic": [0, 3, 6],
+  "babyview/test/count": [0, 3, 6],
+  "babyview/test/leftright": [0, 3, 6],
+  "babyview/test/localize": [0, 3, 6],
+  "babyview/test/whohasmore_synthetic": [0, 3, 6],
+  "ego4d//compare_real": [0, 1, 2],
+  "ego4d//compare_synthetic": [0, 1, 2],
+  "ego4d//count": [0, 1, 2],
+  "ego4d//leftright": [0, 1, 2],
+  "ego4d//localize": [0, 1, 2],
+  "ego4d//memory": [0, 1, 2],
+  "ego4d//picture_vocabulary": [0, 1, 2],
+  "ego4d//spatialdetails": [0, 1, 2],
+  "ego4d//vdr-binary": [0, 1, 2],
+  "ego4d//vdr-open": [0, 1, 2],
+  "nih//count": [0, 1, 2],
+  "nih//memory": [0],
+  "nih//picture_vocab": [0, 2, 4],
+  "nih//picture_vocab_selected": [0, 1, 3],
+  "nih//spatial": [0, 2, 3],
+  "nih//vdr": [0, 1, 2],
+  "nih//who_has_more": [0, 2, 3],
+};
+function curatedFor(source, split, task) {
+  const s = SOURCES[source];
+  const key = `${source}/${s && s.splits ? split : ''}/${task}`;
+  return CURATED[key] || null;
+}
 
 // ── State ──────────────────────────────────────────────────
 const state = { source: 'sft', split: 'train', task: null };
@@ -1057,7 +1221,11 @@ function basePath() {
   const s = SOURCES[state.source];
   return s.splits ? s.base(state.task, state.split) : s.base(state.task);
 }
-function imgUrl(rel) { return `${basePath()}/${rel}`; }
+// Cache-buster: computed once per page load, so a hard reload always refetches
+// the current image/gif files (same token within a session → still cached while
+// browsing). Prevents stale cached images when the underlying files change.
+const ASSET_V = Date.now();
+function imgUrl(rel) { return `${basePath()}/${rel}?v=${ASSET_V}`; }
 
 function cleanText(t) { return t.replace(/<image>/g, ' ').replace(/\s+/g, ' ').trim(); }
 
@@ -1134,6 +1302,25 @@ function makeFramePlayer(rels, opts, registry) {
     }, opts.interval || 120);
     if (registry) registry.push(timer);
   }
+  return wrap;
+}
+
+// ── Real animated .gif clip ────────────────────────────────
+// When a VDR item carries a pre-rendered `gif`, show that exact file (the
+// same clip example.html displays) instead of frame-cycling, so the video
+// is identical across both pages. Reuses the frame-player's styling.
+function makeGifPlayer(gifRel, nframes, opts) {
+  opts = opts || {};
+  const wrap = document.createElement('div');
+  wrap.className = 'frame-player' + (opts.className ? ' ' + opts.className : '');
+  const img = makeImg(gifRel);
+  img.loading = 'eager';
+  img.alt = 'VDR animated clip';
+  wrap.appendChild(img);
+  const badge = document.createElement('span');
+  badge.className = 'frame-player-badge';
+  badge.textContent = nframes + ' frames';
+  wrap.appendChild(badge);
   return wrap;
 }
 
@@ -1357,7 +1544,7 @@ async function loadTask() {
   const url = `${basePath()}/data.json`;
   let data;
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { cache: 'no-store' });
     if (!res.ok) throw new Error(res.status);
     data = await res.json();
   } catch (e) {
@@ -1366,6 +1553,12 @@ async function loadTask() {
   }
   if (!Array.isArray(data)) data = [data];
   if (!data.length) { grid.innerHTML = '<div class="empty">No samples.</div>'; return; }
+  // Curated cap: show the same hand-picked items example.html chose for this
+  // source × task (out-of-range indices are dropped), then cap at 3.
+  const pick = curatedFor(state.source, state.split, state.task);
+  if (pick) data = pick.filter(i => i < data.length).map(i => data[i]);
+  data = data.slice(0, 3);
+  if (!data.length) { grid.innerHTML = '<div class="empty">No curated samples available for this task yet.</div>'; return; }
   grid.innerHTML = '';
   data.forEach((item, i) => grid.appendChild(makeCard(item, i)));
 }
@@ -1375,13 +1568,10 @@ function makeCard(item, i) {
   card.className = 'card';
 
   const images = item.image || [];
-  let thumb;
-  if (isVdrTask(state.task) && images.length > 1) {
-    thumb = makeFramePlayer(images, { className: 'card-thumb-player' }, gridPlayers);
-  } else {
-    thumb = makeImg(images[0] || '');
-    thumb.className = 'card-thumb';
-  }
+  // Thumbnail = the animated clip if any, else the image the answer points to
+  // (not just the first frame), matching the BabyVLM repo.
+  const thumb = makeImg(item.gif || answerImageRel(item) || images[0] || '');
+  thumb.className = 'card-thumb';
   card.appendChild(thumb);
 
   const body = document.createElement('div');
@@ -1401,7 +1591,7 @@ function makeCard(item, i) {
   const nimg = (item.image || []).length;
   const ib = document.createElement('span');
   ib.className = 'badge badge-img';
-  ib.textContent = nimg + (nimg === 1 ? ' img' : ' imgs');
+  ib.textContent = item.gif ? (nimg + ' frames') : (nimg + (nimg === 1 ? ' img' : ' imgs'));
   meta.appendChild(ib);
   body.appendChild(meta);
 
@@ -1410,69 +1600,269 @@ function makeCard(item, i) {
   return card;
 }
 
-// interleave <image> tokens with actual images, advancing a global pointer
-function renderConversation(item, opts) {
-  opts = opts || {};
+// ── Sample rendering (ported verbatim from the BabyVLM repo explorer) ──
+// Each <image> token in the prompt is mapped to its role: an image whose
+// preceding text carries an option label like "(A)" is an ANSWER CHOICE, the
+// rest are STIMULUS. This is what keeps photos aligned with their text.
+
+// Which image the ground-truth answer points to (for the card thumbnail).
+function answerImageRel(item) {
+  const images = item.image || [];
+  if (!images.length) return '';
+  const conv = item.conversations || [];
+  if (conv.filter(c => c.from === 'human').length > 1) return images[0]; // multi-turn (memory)
+  const human = conv.find(c => c.from === 'human') || { value: '' };
+  const gptTurn = [...conv].reverse().find(c => c.from === 'gpt');
+  const answer = gptTurn ? gptTurn.value.trim() : '';
+  const answerLetter = /^[A-Za-z0-9]$/.test(answer) ? answer.toUpperCase() : '';
+  if (!answerLetter) return images[0];
+
+  const parts = human.value.split('<image>');
+  const nImg = parts.length - 1;
+  const stim = [], optImgs = [];
+  for (let k = 0; k < nImg && k < images.length; k++) {
+    const lab = optLabel(parts[k]);
+    if (lab) optImgs.push({ label: lab, rel: images[k] });
+    else stim.push(images[k]);
+  }
+  if (optImgs.length) {
+    const hit = optImgs.find(o => o.label === answerLetter);
+    return hit ? hit.rel : images[0];
+  }
+  if (stim.length > 1) {
+    const tc = parseTextChoices(human.value);
+    if (tc.length === stim.length) {
+      const idx = tc.findIndex(o => o.label === answerLetter);
+      if (idx >= 0) return stim[idx];
+    }
+  }
+  return images[0];
+}
+
+function optLabel(seg) {
+  const m = (seg || '').match(/\(\s*([A-Za-z0-9])\s*\)/);
+  return m ? m[1].toUpperCase() : '';
+}
+function bubbleEl(text) {
+  const b = document.createElement('div');
+  b.className = 'dx-bubble';
+  b.textContent = text;
+  return b;
+}
+function mediaCell(rel, label) {
+  const cell = document.createElement('figure');
+  cell.className = 'dx-media-cell';
+  cell.appendChild(makeImg(rel));
+  if (label) {
+    const cap = document.createElement('figcaption');
+    cap.className = 'dx-media-label';
+    cap.textContent = label;
+    cell.appendChild(cap);
+  }
+  return cell;
+}
+function colLabel(text) {
+  const d = document.createElement('div');
+  d.className = 'dx-col-label';
+  d.textContent = text;
+  return d;
+}
+function choiceBadge(label) {
+  const b = document.createElement('div');
+  b.className = 'dx-choice-badge';
+  b.textContent = label;
+  return b;
+}
+function tickEl(withWord) {
+  const t = document.createElement('span');
+  t.className = 'dx-tick';
+  t.textContent = withWord ? '✓ correct' : '✓';
+  t.setAttribute('aria-label', 'correct answer');
+  return t;
+}
+// parse "(A) text (B) text ..." option lists from a prompt
+function parseTextChoices(raw) {
+  const out = [];
+  const re = /\(([A-Za-z0-9])\)\s*([^()]*)/g;
+  let m;
+  while ((m = re.exec(raw)) !== null) {
+    let t = m[2].split(/\brespond\b|\banswer\b|\bchoose\b/i)[0];
+    t = t.replace(/<image>/g, ' ')
+         .replace(/\s*\bor\b\s*$/i, '')
+         .replace(/\s*of the (image|frame)\b.*$/i, '')
+         .replace(/[?.:,]+\s*$/, '')
+         .replace(/\s+/g, ' ').trim();
+    out.push({ label: m[1].toUpperCase(), text: t });
+  }
+  return out;
+}
+function isOrdinalFiller(t) {
+  return /^(the\s+)?(first|second|third|fourth|fifth|sixth|1st|2nd|3rd|4th|5th|6th)(\s+image)?$/i.test((t || '').trim());
+}
+// one uniform choice card — image variant (thumb + label) or text-only variant
+function choiceCard(label, rel, caption, isCorrect) {
+  const c = document.createElement('div');
+  c.className = 'dx-choice-card' + (isCorrect ? ' correct' : '') + (rel ? '' : ' text-only');
+  if (rel) {
+    const img = makeImg(rel);
+    img.className = 'dx-choice-thumb';
+    c.appendChild(img);
+  }
+  const foot = document.createElement('div');
+  foot.className = 'dx-choice-foot';
+  foot.appendChild(choiceBadge(label));
+  if (caption) {
+    const t = document.createElement('div');
+    t.className = 'dx-choice-text';
+    t.textContent = caption;
+    foot.appendChild(t);
+  }
+  if (isCorrect) foot.appendChild(tickEl(!rel));
+  c.appendChild(foot);
+  return c;
+}
+
+// Multi-turn tasks (e.g. memory): stacked prompt → image row → answer
+function renderSequential(item) {
   const frag = document.createDocumentFragment();
   const images = item.image || [];
-  const vdr = isVdrTask(state.task) && images.length > 1;
   let imgIdx = 0;
-  // when the modal renders a dedicated VDR hero player, skip the inline one
-  let playerAdded = !!opts.skipVdrPlayer;
-
   for (const turn of item.conversations) {
     const wrap = document.createElement('div');
-    wrap.className = 'turn ' + (turn.from === 'gpt' ? 'turn-gpt' : 'turn-human');
+    wrap.className = 'dx-turn ' + (turn.from === 'gpt' ? 'dx-gpt' : 'dx-human');
     const role = document.createElement('div');
-    role.className = 'turn-role';
+    role.className = 'dx-turn-role';
     role.textContent = turn.from === 'gpt' ? 'Answer' : 'Prompt';
     wrap.appendChild(role);
-
-    const bubble = document.createElement('div');
-    bubble.className = 'turn-bubble';
-
     const parts = turn.value.split('<image>');
-
-    // Render each turn as ordered blocks: text segments become their own
-    // paragraphs and consecutive images are grouped into an image strip, so
-    // the prompt text always sits above/below the images and never wraps
-    // beside them.
-    let strip = null;
-    parts.forEach((seg, k) => {
-      if (seg.trim()) {
-        const txt = document.createElement('div');
-        txt.className = 'turn-text';
-        txt.textContent = seg.replace(/\s+/g, ' ').trim();
-        bubble.appendChild(txt);
-        strip = null; // start a fresh image strip after any text
+    const nImg = parts.length - 1;
+    const q = cleanText(turn.value);
+    if (q) wrap.appendChild(bubbleEl(q));
+    if (nImg >= 1) {
+      const row = document.createElement('div');
+      row.className = 'dx-media-row';
+      for (let i = 0; i < nImg && imgIdx < images.length; i++) {
+        row.appendChild(mediaCell(images[imgIdx++], optLabel(parts[i])));
       }
-      if (k < parts.length - 1 && imgIdx < images.length) {
-        if (vdr) {
-          // all VDR frames collapse into one auto-playing player
-          if (!playerAdded) {
-            bubble.appendChild(makeFramePlayer(images, { className: 'modal-player' }, modalPlayers));
-            playerAdded = true;
-          }
-          imgIdx++;
-          strip = null;
-        } else {
-          if (!strip) {
-            strip = document.createElement('div');
-            strip.className = 'img-strip';
-            bubble.appendChild(strip);
-          }
-          strip.appendChild(makeImg(images[imgIdx++]));
-        }
-      }
-    });
-    wrap.appendChild(bubble);
+      wrap.appendChild(row);
+    }
     frag.appendChild(wrap);
   }
   return frag;
 }
 
+// Single-turn tasks: full-width prompt, then stimulus + answer choices side by side
+function renderSample(item) {
+  const conv = item.conversations || [];
+  if (conv.filter(c => c.from === 'human').length > 1) return renderSequential(item);
+
+  const human = conv.find(c => c.from === 'human') || { value: '' };
+  const gptTurn = [...conv].reverse().find(c => c.from === 'gpt');
+  const answer = gptTurn ? gptTurn.value.trim() : '';
+  const answerLetter = /^[A-Za-z0-9]$/.test(answer) ? answer.toUpperCase() : '';
+
+  const images = item.image || [];
+  const parts = human.value.split('<image>');
+  const nImg = parts.length - 1;
+
+  const stim = [], optImgs = [];
+  for (let i = 0; i < nImg && i < images.length; i++) {
+    const lab = optLabel(parts[i]);
+    if (lab) optImgs.push({ label: lab, rel: images[i] });
+    else stim.push(images[i]);
+  }
+  const textChoices = optImgs.length ? [] : parseTextChoices(human.value);
+
+  // Bunched, unlabeled images referred to by positional text choices — pair
+  // each image directly with its choice into one clean grid.
+  const bunchedChoices = (!optImgs.length && stim.length > 1 && stim.length === textChoices.length)
+    ? stim.map((rel, i) => ({ label: textChoices[i].label, rel, caption: isOrdinalFiller(textChoices[i].text) ? '' : textChoices[i].text }))
+    : null;
+
+  const grid = document.createElement('div');
+  grid.className = 'dx-sample';
+
+  // ── Full-width prompt on top ──
+  const promptBlock = document.createElement('div');
+  promptBlock.appendChild(colLabel('Prompt'));
+  const pt = document.createElement('div');
+  pt.className = 'dx-prompt-text';
+  pt.textContent = cleanText(human.value);
+  promptBlock.appendChild(pt);
+  grid.appendChild(promptBlock);
+
+  if (bunchedChoices) {
+    const full = document.createElement('div');
+    full.className = 'dx-full-grid';
+    full.appendChild(colLabel('Answer choices'));
+    const box = document.createElement('div');
+    box.className = 'dx-choices';
+    for (const o of bunchedChoices) {
+      box.appendChild(choiceCard(o.label, o.rel, o.caption, o.label === answerLetter));
+    }
+    full.appendChild(box);
+    grid.appendChild(full);
+    const frag = document.createDocumentFragment();
+    frag.appendChild(grid);
+    return frag;
+  }
+
+  // ── Body row: stimulus image / clip (left) + answer choices (right) ──
+  const body = document.createElement('div');
+  body.className = 'dx-body';
+
+  if (item.gif) {
+    const s = document.createElement('div');
+    s.className = 'dx-stimulus';
+    s.appendChild(makeImg(item.gif));
+    const cap = document.createElement('div');
+    cap.className = 'dx-seq-cap';
+    cap.textContent = 'Animated sequence — ' + images.length + ' frames';
+    s.appendChild(cap);
+    body.appendChild(s);
+  } else {
+    for (const rel of stim) {
+      const s = document.createElement('div');
+      s.className = 'dx-stimulus';
+      s.appendChild(makeImg(rel));
+      body.appendChild(s);
+    }
+  }
+
+  const right = document.createElement('div');
+  right.className = 'dx-col-right';
+  if (optImgs.length) {
+    right.appendChild(colLabel('Answer choices'));
+    const box = document.createElement('div');
+    box.className = 'dx-choices';
+    for (const o of optImgs) {
+      box.appendChild(choiceCard(o.label, o.rel, '', o.label === answerLetter));
+    }
+    right.appendChild(box);
+  } else if (textChoices.length >= 2) {
+    right.appendChild(colLabel('Answer choices'));
+    const box = document.createElement('div');
+    box.className = 'dx-choices';
+    for (const o of textChoices) {
+      box.appendChild(choiceCard(o.label, null, o.text || ('Option ' + o.label), o.label === answerLetter));
+    }
+    right.appendChild(box);
+  } else {
+    right.appendChild(colLabel('Answer'));
+    const card = document.createElement('div');
+    card.className = 'dx-answer-card';
+    card.textContent = answer || '—';
+    right.appendChild(card);
+  }
+  body.appendChild(right);
+  grid.appendChild(body);
+
+  const frag = document.createDocumentFragment();
+  frag.appendChild(grid);
+  return frag;
+}
+
 function openModal(item) {
-  stopPlayers(modalPlayers);
   modalContent.innerHTML = '';
   const tag = document.createElement('div');
   tag.className = 'modal-tag';
@@ -1486,12 +1876,7 @@ function openModal(item) {
   idEl.textContent = 'id: ' + (item.id || '—');
   modalContent.appendChild(idEl);
 
-  // VDR samples get a dedicated hero player above the conversation
-  const images = item.image || [];
-  const vdr = isVdrTask(state.task) && images.length > 1;
-  if (vdr) modalContent.appendChild(makeVdrPlayer(images, modalPlayers));
-
-  modalContent.appendChild(renderConversation(item, { skipVdrPlayer: vdr }));
+  modalContent.appendChild(renderSample(item));
   overlay.classList.add('open');
 }
 

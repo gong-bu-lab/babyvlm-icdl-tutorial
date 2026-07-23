@@ -1,0 +1,173 @@
+[
+  {
+    "id": "leftright_0",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ],
+    "image": [
+      "images/leftright_0000.jpg",
+      "images/leftright_0001.jpeg",
+      "images/leftright_0002.jpeg",
+      "images/leftright_0003.jpg"
+    ]
+  },
+  {
+    "id": "leftright_1",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/leftright_0004.jpg",
+      "images/leftright_0005.jpeg",
+      "images/leftright_0006.jpg",
+      "images/leftright_0007.jpeg"
+    ]
+  },
+  {
+    "id": "leftright_2",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/leftright_0008.jpg",
+      "images/leftright_0009.jpg",
+      "images/leftright_0010.jpeg",
+      "images/leftright_0011.jpeg"
+    ]
+  },
+  {
+    "id": "leftright_3",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ],
+    "image": [
+      "images/leftright_0012.jpg",
+      "images/leftright_0013.jpeg",
+      "images/leftright_0014.jpeg",
+      "images/leftright_0015.jpg"
+    ]
+  },
+  {
+    "id": "leftright_4",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/leftright_0016.jpg",
+      "images/leftright_0017.jpeg",
+      "images/leftright_0018.jpg",
+      "images/leftright_0019.jpeg"
+    ]
+  },
+  {
+    "id": "leftright_5",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/leftright_0020.jpg",
+      "images/leftright_0021.jpeg",
+      "images/leftright_0022.jpg",
+      "images/leftright_0023.jpeg"
+    ]
+  },
+  {
+    "id": "leftright_6",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/leftright_0024.jpg",
+      "images/leftright_0025.jpeg",
+      "images/leftright_0026.jpg",
+      "images/leftright_0027.jpeg"
+    ]
+  },
+  {
+    "id": "leftright_7",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ],
+    "image": [
+      "images/leftright_0028.jpg",
+      "images/leftright_0029.jpeg",
+      "images/leftright_0030.jpeg",
+      "images/leftright_0031.jpg"
+    ]
+  },
+  {
+    "id": "leftright_8",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> Which of the following is the same as this? (A) <image> (B) <image> (C) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ],
+    "image": [
+      "images/leftright_0032.jpg",
+      "images/leftright_0033.jpeg",
+      "images/leftright_0034.jpeg",
+      "images/leftright_0035.jpg"
+    ]
+  }
+]

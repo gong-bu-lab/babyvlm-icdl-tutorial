@@ -1,0 +1,92 @@
+[
+  {
+    "id": "compare_12084",
+    "notes": "first should have 1 second should have 6",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more cars? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_real_0000_0.jpg",
+      "images/compare_real_0000_1.jpg"
+    ]
+  },
+  {
+    "id": "compare_8616",
+    "notes": "first should have 4 second should have 7",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more chairs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_real_0001_0.jpg",
+      "images/compare_real_0001_1.jpg"
+    ]
+  },
+  {
+    "id": "compare_599",
+    "notes": "first should have 4 second should have 1",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more shoes? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_real_0002_0.jpg",
+      "images/compare_real_0002_1.jpg"
+    ]
+  },
+  {
+    "id": "compare_8269",
+    "notes": "first should have 1 second should have 7",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more chairs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_real_0003_0.jpg",
+      "images/compare_real_0003_1.jpg"
+    ]
+  },
+  {
+    "id": "compare_6858",
+    "notes": "first should have 7 second should have 3",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more chairs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_real_0004_0.jpg",
+      "images/compare_real_0004_1.jpg"
+    ]
+  }
+]

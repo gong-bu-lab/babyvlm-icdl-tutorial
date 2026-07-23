@@ -1,92 +1,53 @@
 [
- {
-  "id": "compare_473",
-  "notes": "first should have 2 second should have 1",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Which image has more of glove? (A) <image> (B) <image>"
-   },
-   {
-    "from": "gpt",
-    "value": "A"
-   }
-  ],
-  "image": [
-   "images/compare_real_0000_0.jpeg",
-   "images/compare_real_0000_1.jpeg"
-  ]
- },
- {
-  "id": "compare_388",
-  "notes": "first should have 1 second should have 2",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Which image has more of glove? (A) <image> (B) <image>"
-   },
-   {
-    "from": "gpt",
-    "value": "B"
-   }
-  ],
-  "image": [
-   "images/compare_real_0001_0.jpeg",
-   "images/compare_real_0001_1.jpeg"
-  ]
- },
- {
-  "id": "compare_276",
-  "notes": "first should have 2 second should have 1",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Which image has more of glove? (A) <image> (B) <image>"
-   },
-   {
-    "from": "gpt",
-    "value": "A"
-   }
-  ],
-  "image": [
-   "images/compare_real_0002_0.jpeg",
-   "images/compare_real_0002_1.jpeg"
-  ]
- },
- {
-  "id": "compare_655",
-  "notes": "first should have 6 second should have 1",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Which image has more of on? (A) <image> (B) <image>"
-   },
-   {
-    "from": "gpt",
-    "value": "A"
-   }
-  ],
-  "image": [
-   "images/compare_real_0003_0.jpeg",
-   "images/compare_real_0003_1.jpeg"
-  ]
- },
- {
-  "id": "compare_704",
-  "notes": "first should have 1 second should have 3",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Which image has more of on? (A) <image> (B) <image>"
-   },
-   {
-    "from": "gpt",
-    "value": "B"
-   }
-  ],
-  "image": [
-   "images/compare_real_0004_0.jpeg",
-   "images/compare_real_0004_1.jpeg"
-  ]
- }
+  {
+    "id": "compare_98",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more people? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_real_0000_0.jpeg",
+      "images/compare_real_0000_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_100",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more people? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_real_0001_0.jpeg",
+      "images/compare_real_0001_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_138",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more people? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_real_0002_0.jpeg",
+      "images/compare_real_0002_1.jpeg"
+    ]
+  }
 ]

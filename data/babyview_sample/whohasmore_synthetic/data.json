@@ -1,0 +1,155 @@
+[
+  {
+    "id": "whohasmore_synthetic_0",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0000.jpg",
+      "images/whohasmore_synthetic_0001.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_1",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0002.jpg",
+      "images/whohasmore_synthetic_0003.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_2",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0004.jpg",
+      "images/whohasmore_synthetic_0005.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_3",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0006.jpg",
+      "images/whohasmore_synthetic_0007.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_4",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0008.jpg",
+      "images/whohasmore_synthetic_0009.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_5",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0010.jpg",
+      "images/whohasmore_synthetic_0011.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_6",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0012.jpg",
+      "images/whohasmore_synthetic_0013.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_7",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0014.jpg",
+      "images/whohasmore_synthetic_0015.jpg"
+    ]
+  },
+  {
+    "id": "whohasmore_synthetic_8",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more TVs? (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/whohasmore_synthetic_0016.jpg",
+      "images/whohasmore_synthetic_0017.jpg"
+    ]
+  }
+]

@@ -1,10 +1,10 @@
 [
  {
-  "id": "7b452799-981c-494a-affb-d011cd5c43e5/10277_10409_bottle",
+  "id": "558962eb-e2a1-42e1-ad1b-e1025997a22d/8148_8280_cart",
   "conversations": [
    {
     "from": "human",
-    "value": "<image><image><image><image><image><image><image><image> which part of the frame does the bottle leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+    "value": "<image><image><image><image><image><image> which part of the frame does the cart leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
    },
    {
     "from": "gpt",
@@ -12,91 +12,21 @@
    }
   ],
   "image": [
-   "images/vdr-open_0000_0.jpg",
-   "images/vdr-open_0000_1.jpg",
-   "images/vdr-open_0000_2.jpg",
-   "images/vdr-open_0000_3.jpg",
-   "images/vdr-open_0000_4.jpg",
-   "images/vdr-open_0000_5.jpg",
-   "images/vdr-open_0000_6.jpg",
-   "images/vdr-open_0000_7.jpg"
-  ]
- },
- {
-  "id": "ba779301-79f4-4a7b-bb23-f7fbff508c5c/11544_11676_scale",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "<image><image><image><image><image><image><image><image><image> which part of the frame does the scale leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
-   },
-   {
-    "from": "gpt",
-    "value": "left"
-   }
+   "images/vdr_0000_0.jpg",
+   "images/vdr_0000_1.jpg",
+   "images/vdr_0000_2.jpg",
+   "images/vdr_0000_3.jpg",
+   "images/vdr_0000_4.jpg",
+   "images/vdr_0000_5.jpg"
   ],
-  "image": [
-   "images/vdr-open_0001_0.jpg",
-   "images/vdr-open_0001_1.jpg",
-   "images/vdr-open_0001_2.jpg",
-   "images/vdr-open_0001_3.jpg",
-   "images/vdr-open_0001_4.jpg",
-   "images/vdr-open_0001_5.jpg",
-   "images/vdr-open_0001_6.jpg",
-   "images/vdr-open_0001_7.jpg",
-   "images/vdr-open_0001_8.jpg"
-  ]
+  "gif": "images/vdr_0000.gif"
  },
  {
-  "id": "4a31277f-d8b8-45df-8594-423f7767047e/3719_3851_picture",
+  "id": "c1562c37-6e6a-43a2-af09-3fdc1cd6f0c9/504_636_basket",
   "conversations": [
    {
     "from": "human",
-    "value": "<image><image><image><image><image><image><image><image><image> which part of the frame does the picture leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
-   },
-   {
-    "from": "gpt",
-    "value": "right"
-   }
-  ],
-  "image": [
-   "images/vdr-open_0002_0.jpg",
-   "images/vdr-open_0002_1.jpg",
-   "images/vdr-open_0002_2.jpg",
-   "images/vdr-open_0002_3.jpg",
-   "images/vdr-open_0002_4.jpg",
-   "images/vdr-open_0002_5.jpg",
-   "images/vdr-open_0002_6.jpg",
-   "images/vdr-open_0002_7.jpg",
-   "images/vdr-open_0002_8.jpg"
-  ]
- },
- {
-  "id": "0214acc5-097f-465d-bace-45628f45eb10/6774_6906_scale",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "<image><image><image><image><image><image> which part of the frame does the scale leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
-   },
-   {
-    "from": "gpt",
-    "value": "top"
-   }
-  ],
-  "image": [
-   "images/vdr-open_0003_0.jpg",
-   "images/vdr-open_0003_1.jpg",
-   "images/vdr-open_0003_2.jpg",
-   "images/vdr-open_0003_3.jpg",
-   "images/vdr-open_0003_4.jpg",
-   "images/vdr-open_0003_5.jpg"
-  ]
- },
- {
-  "id": "2b003317-1e74-48d2-ad70-e7d9ea6636ee/6504_6636_broom",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "<image><image><image><image><image><image><image> which part of the frame does the broom leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+    "value": "<image><image><image><image><image><image><image> which part of the frame does the basket leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
    },
    {
     "from": "gpt",
@@ -104,13 +34,36 @@
    }
   ],
   "image": [
-   "images/vdr-open_0004_0.jpg",
-   "images/vdr-open_0004_1.jpg",
-   "images/vdr-open_0004_2.jpg",
-   "images/vdr-open_0004_3.jpg",
-   "images/vdr-open_0004_4.jpg",
-   "images/vdr-open_0004_5.jpg",
-   "images/vdr-open_0004_6.jpg"
-  ]
+   "images/vdr_0001_0.jpg",
+   "images/vdr_0001_1.jpg",
+   "images/vdr_0001_2.jpg",
+   "images/vdr_0001_3.jpg",
+   "images/vdr_0001_4.jpg",
+   "images/vdr_0001_5.jpg",
+   "images/vdr_0001_6.jpg"
+  ],
+  "gif": "images/vdr_0001.gif"
+ },
+ {
+  "id": "1542bf6c-76e2-47bf-8509-26eb05b5beba/2964_3096_cup",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> which part of the frame does the cup leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr_0002_0.jpg",
+   "images/vdr_0002_1.jpg",
+   "images/vdr_0002_2.jpg",
+   "images/vdr_0002_3.jpg",
+   "images/vdr_0002_4.jpg",
+   "images/vdr_0002_5.jpg"
+  ],
+  "gif": "images/vdr_0002.gif"
  }
 ]

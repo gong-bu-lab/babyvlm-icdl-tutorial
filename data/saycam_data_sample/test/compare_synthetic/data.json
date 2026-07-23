@@ -1,0 +1,87 @@
+[
+  {
+    "id": "compare_synthetic_490",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more refrigerators? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0000_0.jpeg",
+      "images/compare_synthetic_0000_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_118",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more coffeemakers? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0001_0.jpeg",
+      "images/compare_synthetic_0001_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_493",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more cases? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0002_0.jpeg",
+      "images/compare_synthetic_0002_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_1798",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more brooms? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0003_0.jpeg",
+      "images/compare_synthetic_0003_1.jpeg"
+    ]
+  },
+  {
+    "id": "compare_synthetic_1161",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Which image has more buttercontainers? Answer (A) <image> (B) <image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/compare_synthetic_0004_0.jpeg",
+      "images/compare_synthetic_0004_1.jpeg"
+    ]
+  }
+]

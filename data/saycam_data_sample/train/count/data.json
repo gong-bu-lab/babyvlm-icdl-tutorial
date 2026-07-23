@@ -1,0 +1,82 @@
+[
+  {
+    "id": "count_10476",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many steps do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "9"
+      }
+    ],
+    "image": [
+      "images/count_0000_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_1824",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many barriers do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "12"
+      }
+    ],
+    "image": [
+      "images/count_0001_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_409",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many papers do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "10"
+      }
+    ],
+    "image": [
+      "images/count_0002_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_12149",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many hands do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "5"
+      }
+    ],
+    "image": [
+      "images/count_0003_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_4506",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many books do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "4"
+      }
+    ],
+    "image": [
+      "images/count_0004_0.jpeg"
+    ]
+  }
+]

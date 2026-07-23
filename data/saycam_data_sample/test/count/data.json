@@ -1,0 +1,82 @@
+[
+  {
+    "id": "count_131",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many cabinets do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "10"
+      }
+    ],
+    "image": [
+      "images/count_0000_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_1292",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many tables do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "10"
+      }
+    ],
+    "image": [
+      "images/count_0001_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_1643",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many shadows do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "7"
+      }
+    ],
+    "image": [
+      "images/count_0002_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_1096",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many floras do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "4"
+      }
+    ],
+    "image": [
+      "images/count_0003_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_271",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many containers do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "11"
+      }
+    ],
+    "image": [
+      "images/count_0004_0.jpeg"
+    ]
+  }
+]

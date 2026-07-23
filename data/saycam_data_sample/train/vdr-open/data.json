@@ -1,0 +1,70 @@
+[
+ {
+  "id": "Y_20190125_1111_03_clip_003_augmented",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image> which part of the frame do the toys collectively leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "right"
+   }
+  ],
+  "image": [
+   "images/vdr_0000_0.jpg",
+   "images/vdr_0000_1.jpg",
+   "images/vdr_0000_2.jpg",
+   "images/vdr_0000_3.jpg",
+   "images/vdr_0000_4.jpg",
+   "images/vdr_0000_5.jpg",
+   "images/vdr_0000_6.jpg",
+   "images/vdr_0000_7.jpg",
+   "images/vdr_0000_8.jpg"
+  ],
+  "gif": "images/vdr_0000.gif"
+ },
+ {
+  "id": "Y_20181207_0923_03_clip_011_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image> which part of the frame does the pillow leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr_0001_0.jpg",
+   "images/vdr_0001_1.jpg",
+   "images/vdr_0001_2.jpg",
+   "images/vdr_0001_3.jpg",
+   "images/vdr_0001_4.jpg"
+  ],
+  "gif": "images/vdr_0001.gif"
+ },
+ {
+  "id": "Y_20190105_1022_01_clip_005_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> which part of the frame does the phone leave from? respond ONLY with one of: 'top', 'bottom', 'left', 'right', 'top right', 'top left', 'bottom right', or 'bottom left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr_0002_0.jpg",
+   "images/vdr_0002_1.jpg",
+   "images/vdr_0002_2.jpg",
+   "images/vdr_0002_3.jpg",
+   "images/vdr_0002_4.jpg",
+   "images/vdr_0002_5.jpg"
+  ],
+  "gif": "images/vdr_0002.gif"
+ }
+]

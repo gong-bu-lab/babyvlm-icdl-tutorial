@@ -1,0 +1,146 @@
+[
+  {
+    "id": "count_0",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "8"
+      }
+    ],
+    "image": [
+      "images/count_0000.jpg"
+    ]
+  },
+  {
+    "id": "count_1",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "9"
+      }
+    ],
+    "image": [
+      "images/count_0001.jpg"
+    ]
+  },
+  {
+    "id": "count_2",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "8"
+      }
+    ],
+    "image": [
+      "images/count_0002.jpg"
+    ]
+  },
+  {
+    "id": "count_3",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "6"
+      }
+    ],
+    "image": [
+      "images/count_0003.jpg"
+    ]
+  },
+  {
+    "id": "count_4",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "2"
+      }
+    ],
+    "image": [
+      "images/count_0004.jpg"
+    ]
+  },
+  {
+    "id": "count_5",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "11"
+      }
+    ],
+    "image": [
+      "images/count_0005.jpg"
+    ]
+  },
+  {
+    "id": "count_6",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "4"
+      }
+    ],
+    "image": [
+      "images/count_0006.jpg"
+    ]
+  },
+  {
+    "id": "count_7",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "10"
+      }
+    ],
+    "image": [
+      "images/count_0007.jpg"
+    ]
+  },
+  {
+    "id": "count_8",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many TVs do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "12"
+      }
+    ],
+    "image": [
+      "images/count_0008.jpg"
+    ]
+  }
+]

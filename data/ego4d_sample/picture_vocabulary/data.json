@@ -1,102 +1,59 @@
 [
- {
-  "id": "picture_vocabulary_554",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Touch the image of 'sweater' (A)<image> (B)<image> (C)<image> (D)<image>"
-   },
-   {
-    "from": "gpt",
-    "value": "D"
-   }
-  ],
-  "split": "test",
-  "image": [
-   "images/picture_vocabulary_0000_0.png",
-   "images/picture_vocabulary_0000_1.png",
-   "images/picture_vocabulary_0000_2.png",
-   "images/picture_vocabulary_0000_3.png"
-  ]
- },
- {
-  "id": "picture_vocabulary_1136",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Touch the image of 'hit' (A)<image> (B)<image> (C)<image> (D)<image>"
-   },
-   {
-    "from": "gpt",
-    "value": "D"
-   }
-  ],
-  "split": "test",
-  "image": [
-   "images/picture_vocabulary_0001_0.png",
-   "images/picture_vocabulary_0001_1.png",
-   "images/picture_vocabulary_0001_2.png",
-   "images/picture_vocabulary_0001_3.png"
-  ]
- },
- {
-  "id": "picture_vocabulary_1122",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Touch the image of 'bread' (A)<image> (B)<image> (C)<image> (D)<image>"
-   },
-   {
-    "from": "gpt",
-    "value": "C"
-   }
-  ],
-  "split": "test",
-  "image": [
-   "images/picture_vocabulary_0002_0.png",
-   "images/picture_vocabulary_0002_1.png",
-   "images/picture_vocabulary_0002_2.png",
-   "images/picture_vocabulary_0002_3.png"
-  ]
- },
- {
-  "id": "picture_vocabulary_672",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Touch the image of 'woods' (A)<image> (B)<image> (C)<image> (D)<image>"
-   },
-   {
-    "from": "gpt",
-    "value": "B"
-   }
-  ],
-  "split": "test",
-  "image": [
-   "images/picture_vocabulary_0003_0.png",
-   "images/picture_vocabulary_0003_1.png",
-   "images/picture_vocabulary_0003_2.png",
-   "images/picture_vocabulary_0003_3.png"
-  ]
- },
- {
-  "id": "picture_vocabulary_1030",
-  "conversations": [
-   {
-    "from": "human",
-    "value": "Touch the image of 'closet' (A)<image> (B)<image> (C)<image> (D)<image>"
-   },
-   {
-    "from": "gpt",
-    "value": "D"
-   }
-  ],
-  "split": "test",
-  "image": [
-   "images/picture_vocabulary_0004_0.png",
-   "images/picture_vocabulary_0004_1.png",
-   "images/picture_vocabulary_0004_2.png",
-   "images/picture_vocabulary_0004_3.png"
-  ]
- }
+  {
+    "id": "picture_vocabulary_4",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Touch the image of 'basket' (A)<image> (B)<image> (C)<image> (D)<image>"
+      },
+      {
+        "from": "gpt",
+        "value": "C"
+      }
+    ],
+    "image": [
+      "images/picture_vocabulary_0000_0.png",
+      "images/picture_vocabulary_0000_1.png",
+      "images/picture_vocabulary_0000_2.png",
+      "images/picture_vocabulary_0000_3.png"
+    ]
+  },
+  {
+    "id": "picture_vocabulary_10",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Touch the image of 'block' (A)<image> (B)<image> (C)<image> (D)<image>"
+      },
+      {
+        "from": "gpt",
+        "value": "B"
+      }
+    ],
+    "image": [
+      "images/picture_vocabulary_0001_0.png",
+      "images/picture_vocabulary_0001_1.png",
+      "images/picture_vocabulary_0001_2.png",
+      "images/picture_vocabulary_0001_3.png"
+    ]
+  },
+  {
+    "id": "picture_vocabulary_26",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "Touch the image of 'chair' (A)<image> (B)<image> (C)<image> (D)<image>"
+      },
+      {
+        "from": "gpt",
+        "value": "A"
+      }
+    ],
+    "image": [
+      "images/picture_vocabulary_0002_0.png",
+      "images/picture_vocabulary_0002_1.png",
+      "images/picture_vocabulary_0002_2.png",
+      "images/picture_vocabulary_0002_3.png"
+    ]
+  }
 ]

@@ -1,0 +1,82 @@
+[
+  {
+    "id": "count_2208",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many trees do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "10"
+      }
+    ],
+    "image": [
+      "images/count_0000_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_2825",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many houses do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "1"
+      }
+    ],
+    "image": [
+      "images/count_0001_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_823",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many buildings do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "4"
+      }
+    ],
+    "image": [
+      "images/count_0002_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_2920",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many drums do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "5"
+      }
+    ],
+    "image": [
+      "images/count_0003_0.jpeg"
+    ]
+  },
+  {
+    "id": "count_1276",
+    "conversations": [
+      {
+        "from": "human",
+        "value": "<image> How many foods do you see?"
+      },
+      {
+        "from": "gpt",
+        "value": "7"
+      }
+    ],
+    "image": [
+      "images/count_0004_0.jpeg"
+    ]
+  }
+]

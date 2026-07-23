@@ -1,0 +1,72 @@
+[
+ {
+  "id": "S_20141015_2328_02_clip_009_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image> does the notebook leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "right"
+   }
+  ],
+  "image": [
+   "images/vdr_0000_0.jpg",
+   "images/vdr_0000_1.jpg",
+   "images/vdr_0000_2.jpg",
+   "images/vdr_0000_3.jpg",
+   "images/vdr_0000_4.jpg",
+   "images/vdr_0000_5.jpg"
+  ],
+  "gif": "images/vdr_0000.gif"
+ },
+ {
+  "id": "Y_20200208_2325_02_clip_013_original",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image><image> do the toys collectively leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "left"
+   }
+  ],
+  "image": [
+   "images/vdr_0001_0.jpg",
+   "images/vdr_0001_1.jpg",
+   "images/vdr_0001_2.jpg",
+   "images/vdr_0001_3.jpg",
+   "images/vdr_0001_4.jpg",
+   "images/vdr_0001_5.jpg",
+   "images/vdr_0001_6.jpg",
+   "images/vdr_0001_7.jpg",
+   "images/vdr_0001_8.jpg"
+  ],
+  "gif": "images/vdr_0001.gif"
+ },
+ {
+  "id": "S_20140403_1717_02_clip_010_augmented",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image> does the chair leave the frame through the right side of the frame or the left side of the frame? respond ONLY with 'right' or 'left'."
+   },
+   {
+    "from": "gpt",
+    "value": "right"
+   }
+  ],
+  "image": [
+   "images/vdr_0002_0.jpg",
+   "images/vdr_0002_1.jpg",
+   "images/vdr_0002_2.jpg",
+   "images/vdr_0002_3.jpg",
+   "images/vdr_0002_4.jpg",
+   "images/vdr_0002_5.jpg",
+   "images/vdr_0002_6.jpg"
+  ],
+  "gif": "images/vdr_0002.gif"
+ }
+]
