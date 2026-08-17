@@ -1,0 +1,37 @@
+{
+  "source_file": "/projectnb/ivc-ml/wsashawn/LLaVA/playground/data/SAYCam_pretrain/interleaved.json",
+  "seed": "42-saycam-multi_turn",
+  "pool": 900,
+  "data_source": "saycam",
+  "format": "multi_turn",
+  "n_items": 3,
+  "entries": [
+    {
+      "id": 1007966,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20191007_1923_01_1231520_1239840_frame_2.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20191007_1923_01_1240000_1243040_frame_6.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20191007_1923_01_1247120_1248200_frame_2.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20191007_1923_01_1248240_1249320_frame_1.jpg"
+      ]
+    },
+    {
+      "id": 975069,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140320_1703_04_200680_203120_frame_2.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140320_1703_04_204520_205960_frame_1.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140320_1703_04_209120_210360_frame_2.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140320_1703_04_210920_212040_frame_4.jpg"
+      ]
+    },
+    {
+      "id": 983482,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140911_2225_02_488440_489840_frame_3.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140911_2225_02_491560_492800_frame_4.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140911_2225_02_496200_501560_frame_5.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20140911_2225_02_501800_503400_frame_1.jpg"
+      ]
+    }
+  ]
+}

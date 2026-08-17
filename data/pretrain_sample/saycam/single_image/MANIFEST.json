@@ -1,0 +1,28 @@
+{
+  "source_file": "/projectnb/ivc-ml/wsashawn/LLaVA/playground/data/SAYCam_pretrain/single_image.json",
+  "seed": "42-saycam-single_image",
+  "pool": 900,
+  "data_source": "saycam",
+  "format": "single_image",
+  "n_items": 3,
+  "entries": [
+    {
+      "id": "647645",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/S_20141108_2422_01_982520_983880_frame_3.jpg"
+      ]
+    },
+    {
+      "id": "311577",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/A_20140720_2207_02_369040_370320_frame_1.jpg"
+      ]
+    },
+    {
+      "id": "370761",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/A_20150425_3112_01_183520_202200_frame_21.jpg"
+      ]
+    }
+  ]
+}

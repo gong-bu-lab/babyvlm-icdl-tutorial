@@ -1,0 +1,86 @@
+[
+ {
+  "id": "52918",
+  "image": [
+   "media/video_clip_0000_0.jpg",
+   "media/video_clip_0000_1.jpg",
+   "media/video_clip_0000_2.jpg",
+   "media/video_clip_0000_3.jpg",
+   "media/video_clip_0000_4.jpg",
+   "media/video_clip_0000_5.jpg",
+   "media/video_clip_0000_6.jpg",
+   "media/video_clip_0000_7.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Watch the frog go hop, hop, hop."
+   }
+  ],
+  "meta": {
+   "subject": "S00320002",
+   "recorded": "2024-04-12",
+   "frame": "S00320002_2024-04-12_1_recQksuHll3p7r0Rx_351213_353295_frame_1"
+  }
+ },
+ {
+  "id": "66809",
+  "image": [
+   "media/video_clip_0001_0.jpg",
+   "media/video_clip_0001_1.jpg",
+   "media/video_clip_0001_2.jpg",
+   "media/video_clip_0001_3.jpg",
+   "media/video_clip_0001_4.jpg",
+   "media/video_clip_0001_5.jpg",
+   "media/video_clip_0001_6.jpg",
+   "media/video_clip_0001_7.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Push the yellow button."
+   }
+  ],
+  "meta": {
+   "subject": "S00350001",
+   "recorded": "2023-11-27",
+   "frame": "S00350001_2023-11-27_3_recEVyX7FZ5vDYco4_337340_338781_frame_1"
+  }
+ },
+ {
+  "id": "160535",
+  "image": [
+   "media/video_clip_0002_0.jpg",
+   "media/video_clip_0002_1.jpg",
+   "media/video_clip_0002_2.jpg",
+   "media/video_clip_0002_3.jpg",
+   "media/video_clip_0002_4.jpg",
+   "media/video_clip_0002_5.jpg",
+   "media/video_clip_0002_6.jpg",
+   "media/video_clip_0002_7.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image><image><image><image><image><image><image><image>"
+   },
+   {
+    "from": "gpt",
+    "value": "With a book."
+   }
+  ],
+  "meta": {
+   "subject": "S00510002",
+   "recorded": "2024-10-07",
+   "frame": "S00510002_2024-10-07_1_recPDOuOAfhGQ4zRK_228501_229362_frame_1"
+  }
+ }
+]

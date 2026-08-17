@@ -1,0 +1,22 @@
+{
+  "source_file": "/projectnb/ivc-ml/maxwh/code/senses/touch/public_repo/data/jsons/filtered_speech.json",
+  "seed": "42-saycam-video_clip",
+  "pool": 900,
+  "data_source": "saycam",
+  "format": "video_clip",
+  "n_items": 3,
+  "entries": [
+    {
+      "source_video": "/projectnb/ivc-ml/maxwh/code/senses/touch/public_repo/data/clips/Y_20200118_2304_02_816320_816880_frame2.mp4",
+      "source_still": "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20200118_2304_02_816320_816880_frame_2.jpg"
+    },
+    {
+      "source_video": "/projectnb/ivc-ml/maxwh/code/senses/touch/public_repo/data/clips/Y_20181218_1004_01_226340_229700_frame2.mp4",
+      "source_still": "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20181218_1004_01_226340_229700_frame_2.jpg"
+    },
+    {
+      "source_video": "/projectnb/ivc-ml/maxwh/code/senses/touch/public_repo/data/clips/Y_20190208_1125_03_317400_326920_frame4.mp4",
+      "source_still": "/projectnb/ivc-ml/ac25/BabyFM/SAYCam_Dataset/pretraining_dataset_raw/image/Y_20190208_1125_03_317400_326920_frame_4.jpg"
+    }
+  ]
+}

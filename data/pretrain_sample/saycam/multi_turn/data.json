@@ -1,0 +1,149 @@
+[
+ {
+  "id": "1007966",
+  "image": [
+   "media/multi_turn_0000_0.jpg",
+   "media/multi_turn_0000_1.jpg",
+   "media/multi_turn_0000_2.jpg",
+   "media/multi_turn_0000_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "it's empty but you know what goes in there"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "all your books about solar system and dinosaurs"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "oh no that one 's too big"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "do you know which ones go in there"
+   }
+  ],
+  "meta": {
+   "subject": "Y",
+   "recorded": "2019-10-07",
+   "recording": "Y_20191007_1923_01",
+   "frame": "Y_20191007_1923_01_1231520_1239840_frame_2"
+  }
+ },
+ {
+  "id": "975069",
+  "image": [
+   "media/multi_turn_0001_0.jpg",
+   "media/multi_turn_0001_1.jpg",
+   "media/multi_turn_0001_2.jpg",
+   "media/multi_turn_0001_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "you want to take your hat with you or leave it in the car"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "oh leave it in the car"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "OK there we go"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "when you get out of the car"
+   }
+  ],
+  "meta": {
+   "subject": "S",
+   "recorded": "2014-03-20",
+   "recording": "S_20140320_1703_04",
+   "frame": "S_20140320_1703_04_200680_203120_frame_2"
+  }
+ },
+ {
+  "id": "983482",
+  "image": [
+   "media/multi_turn_0002_0.jpg",
+   "media/multi_turn_0002_1.jpg",
+   "media/multi_turn_0002_2.jpg",
+   "media/multi_turn_0002_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "you have a sense of direction"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "should we turn right or left"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "yeah well there's no no place to turn left right"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "we should turn right"
+   }
+  ],
+  "meta": {
+   "subject": "S",
+   "recorded": "2014-09-11",
+   "recording": "S_20140911_2225_02",
+   "frame": "S_20140911_2225_02_488440_489840_frame_3"
+  }
+ }
+]

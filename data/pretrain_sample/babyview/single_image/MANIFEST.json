@@ -1,0 +1,28 @@
+{
+  "source_file": "/projectnb/ivc-ml/wsashawn/LLaVA/playground/data/BabyView_pretrain/single_image.json",
+  "seed": "42-babyview-single_image",
+  "pool": 900,
+  "data_source": "babyview",
+  "format": "single_image",
+  "n_items": 3,
+  "entries": [
+    {
+      "id": "353689",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00270001_2023-08-15_H18M44S56_recQX1mNJEfZegswH_33641_41132_frame_8.jpg"
+      ]
+    },
+    {
+      "id": "321694",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00230001_2024-05-20_1_recR5u0tb0ZGWLOx1_rotated_571719_578205_frame_4.jpg"
+      ]
+    },
+    {
+      "id": "1005699",
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00490001_2024-05-21_2_rec8Ms0CaONFtkF9A_64607_70234_frame_6.jpg"
+      ]
+    }
+  ]
+}

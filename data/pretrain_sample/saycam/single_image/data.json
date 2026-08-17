@@ -1,0 +1,68 @@
+[
+ {
+  "id": "647645",
+  "image": [
+   "media/single_image_0000_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "but how do you turn it on first"
+   }
+  ],
+  "meta": {
+   "subject": "S",
+   "recorded": "2014-11-08",
+   "recording": "S_20141108_2422_01",
+   "frame": "S_20141108_2422_01_982520_983880_frame_3"
+  }
+ },
+ {
+  "id": "311577",
+  "image": [
+   "media/single_image_0001_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "a mountain yes"
+   }
+  ],
+  "meta": {
+   "subject": "A",
+   "recorded": "2014-07-20",
+   "recording": "A_20140720_2207_02",
+   "frame": "A_20140720_2207_02_369040_370320_frame_1"
+  }
+ },
+ {
+  "id": "370761",
+  "image": [
+   "media/single_image_0002_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "we we should treat it not wet"
+   }
+  ],
+  "meta": {
+   "subject": "A",
+   "recorded": "2015-04-25",
+   "recording": "A_20150425_3112_01",
+   "frame": "A_20150425_3112_01_183520_202200_frame_21"
+  }
+ }
+]

@@ -1,0 +1,37 @@
+{
+  "source_file": "/projectnb/ivc-ml/wsashawn/LLaVA/playground/data/BabyView_pretrain/interleaved.json",
+  "seed": "42-babyview-multi_turn",
+  "pool": 900,
+  "data_source": "babyview",
+  "format": "multi_turn",
+  "n_items": 3,
+  "entries": [
+    {
+      "id": 1429110,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00510002_2024-07-23_1_recC3r5i6imRVV8gm_376793_378014_frame_8.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00510002_2024-07-23_1_recC3r5i6imRVV8gm_382420_383741_frame_8.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00510002_2024-07-23_1_recC3r5i6imRVV8gm_383982_385163_frame_3.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00510002_2024-07-23_1_recC3r5i6imRVV8gm_385183_386344_frame_2.jpg"
+      ]
+    },
+    {
+      "id": 1409274,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00370001_2024-02-24_1_rec6KbUMeTPurKGHU_3423_8611_frame_4.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00370001_2024-02-24_1_rec6KbUMeTPurKGHU_11014_18605_frame_4.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00370001_2024-02-24_1_rec6KbUMeTPurKGHU_21489_22551_frame_1.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00370001_2024-02-24_1_rec6KbUMeTPurKGHU_23612_24433_frame_3.jpg"
+      ]
+    },
+    {
+      "id": 1400252,
+      "source_images": [
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00320002_2025-04-26_1_recaqJwMjMSUbraEm_118730_122214_frame_4.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00320002_2025-04-26_1_recaqJwMjMSUbraEm_125558_127560_frame_8.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00320002_2025-04-26_1_recaqJwMjMSUbraEm_128901_130243_frame_7.jpg",
+        "/projectnb/ivc-ml/ac25/BabyFM/BabyView_Dataset/pretraining_dataset_raw/image_uniform8/S00320002_2025-04-26_1_recaqJwMjMSUbraEm_130984_135129_frame_2.jpg"
+      ]
+    }
+  ]
+}

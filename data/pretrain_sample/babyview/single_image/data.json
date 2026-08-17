@@ -1,0 +1,65 @@
+[
+ {
+  "id": "353689",
+  "image": [
+   "media/single_image_0000_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Is it an eating idea, Mama?"
+   }
+  ],
+  "meta": {
+   "subject": "S00270001",
+   "recorded": "2023-08-15",
+   "frame": "S00270001_2023-08-15_H18M44S56_recQX1mNJEfZegswH_33641_41132_frame_8"
+  }
+ },
+ {
+  "id": "321694",
+  "image": [
+   "media/single_image_0001_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Let me find you some cheese."
+   }
+  ],
+  "meta": {
+   "subject": "S00230001",
+   "recorded": "2024-05-20",
+   "frame": "S00230001_2024-05-20_1_recR5u0tb0ZGWLOx1_rotated_571719_578205_frame_4"
+  }
+ },
+ {
+  "id": "1005699",
+  "image": [
+   "media/single_image_0002_0.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Now, what was I doing again?"
+   }
+  ],
+  "meta": {
+   "subject": "S00490001",
+   "recorded": "2024-05-21",
+   "frame": "S00490001_2024-05-21_2_rec8Ms0CaONFtkF9A_64607_70234_frame_6"
+  }
+ }
+]

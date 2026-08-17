@@ -3,20 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" id="themeColorMeta" content="#f6f5f1" />
+  <meta name="theme-color" content="#f6f5f1" />
   <title>BabyVLM-v2 Data Explorer</title>
-
-  <!-- Apply saved/system theme before first paint to avoid a flash -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem('theme');
-        // Default to light; only go dark if the user explicitly chose it.
-        var dark = saved === 'dark';
-        if (dark) document.documentElement.setAttribute('data-theme', 'dark');
-      } catch (e) {}
-    })();
-  </script>
 
   <link rel="icon" type="image/png" href="assets/thickbaby.png" />
 
@@ -25,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════ Design tokens ═══════════════════ */
+    /* Design tokens */
     :root {
       --paper:        #f6f5f1;
       --surface:      #ffffff;
@@ -39,6 +27,11 @@
       --accent:       #3f5a4a;
       --accent-strong:#2e4436;
       --accent-tint:  #eaefe9;
+
+      /* Text selection — its own pair, since --accent-tint is too pale to read
+         as a highlight and is already spoken for by badges, chips and bubbles. */
+      --select-bg:    #c5dbc8;
+      --select-fg:    #22301f;
 
       --font-display: "Fraunces", Georgia, "Times New Roman", serif;
       --font-sans:    "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -60,7 +53,8 @@
       --split-active-fg: #ffffff;
     }
 
-    /* ═══════════════════ Dark theme ═══════════════════ */
+    /* Dark theme — retained but currently unreachable: the toggle was removed
+       and nothing sets data-theme, so the site always renders light. */
     :root[data-theme="dark"] {
       --paper:        #16150f;
       --surface:      #201e17;
@@ -74,6 +68,9 @@
       --accent:       #8fb39d;
       --accent-strong:#aecabb;
       --accent-tint:  #242f28;
+
+      --select-bg:    #3a5c47;
+      --select-fg:    #ece8dd;
 
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
       --shadow:    0 1px 2px rgba(0,0,0,0.3), 0 24px 60px -28px rgba(0,0,0,0.7);
@@ -100,12 +97,12 @@
       transition: background 0.3s var(--ease), color 0.3s var(--ease);
     }
 
-    ::selection { background: var(--accent-tint); color: var(--accent-strong); }
+    ::selection { background: var(--select-bg); color: var(--select-fg); }
     a { color: var(--accent); text-underline-offset: 2px; }
 
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
 
-    /* ═══════════════════ Animation primitives ═══════════════════ */
+    /* Animation primitives */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: none; }
@@ -128,7 +125,7 @@
     .anim-2 { animation-delay: 0.16s; }
     .anim-3 { animation-delay: 0.27s; }
 
-    /* ═══════════════════ Top nav ═══════════════════ */
+    /* Top nav */
     .site-nav {
       position: sticky;
       top: 0;
@@ -181,31 +178,7 @@
     .nav-links a:hover::after { right: 0; }
     .nav-links a.active::after { right: 0; }
 
-    /* theme toggle */
-    .theme-toggle {
-      flex: none;
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      border: 1px solid var(--border-strong);
-      background: var(--surface);
-      color: var(--ink-soft);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      line-height: 1;
-      transition: background 0.2s var(--ease), border-color 0.2s var(--ease),
-                  color 0.2s var(--ease), transform 0.15s var(--ease);
-    }
-    .theme-toggle:hover { border-color: var(--ink); color: var(--ink); transform: translateY(-1px); }
-    .theme-toggle svg { width: 18px; height: 18px; display: block; }
-    /* show sun in dark mode (click → light), moon in light mode (click → dark) */
-    .theme-toggle .icon-sun  { display: none; }
-    :root[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
-    :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-
-    /* ═══════════════════ Hero ═══════════════════ */
+    /* Hero */
     header {
       padding: clamp(44px, 7vw, 88px) clamp(20px, 5vw, 56px) clamp(40px, 5vw, 64px);
       border-bottom: 1px solid var(--border);
@@ -250,7 +223,7 @@
       padding-left: clamp(24px, 3vw, 44px);
     }
 
-    /* ═══════════════════ Main layout ═══════════════════ */
+    /* Main layout */
     main {
       max-width: var(--maxw);
       margin: 0 auto;
@@ -291,7 +264,7 @@
       padding: 1px 5px;
     }
 
-    /* ── Stats ── */
+    /* Stats */
     .stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -321,7 +294,7 @@
       margin-top: var(--sp-2);
     }
 
-    /* ── Controls ── */
+    /* Controls */
     .control-label {
       font-family: var(--font-sans);
       font-size: 0.74rem;
@@ -380,7 +353,7 @@
       transition: opacity 0.2s var(--ease);
     }
 
-    /* ── Item grid ── */
+    /* Item grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -413,7 +386,7 @@
     }
     .card-thumb-wrap { overflow: hidden; }
 
-    /* ── VDR animated frame player (auto-playing "gif") ── */
+    /* VDR animated frame player (auto-playing "gif") */
     .frame-player { position: relative; overflow: hidden; background: var(--surface-2); }
     .frame-player > img { display: block; width: 100%; }
     .frame-player-badge {
@@ -490,7 +463,7 @@
       padding: 1px 5px;
     }
 
-    /* ── Modal ── */
+    /* Modal */
     .overlay {
       position: fixed;
       inset: 0;
@@ -551,7 +524,7 @@
       word-break: break-all;
     }
 
-    /* ── Enhanced VDR player (modal hero) ── */
+    /* Enhanced VDR player (modal hero) */
     .vdr-stage {
       max-width: 480px;
       margin: 0 auto var(--sp-6);
@@ -734,8 +707,8 @@
     .img-strip { display: flex; flex-wrap: wrap; gap: 8px; margin-top: var(--sp-2); }
     .img-strip:first-child { margin-top: 0; }
 
-    /* ── Sample layout + multiple-choice (structure ported from BabyVLM repo,
-          styled with the tutorial's own palette so it stays theme/dark aware) ── */
+    /* Sample layout + multiple-choice (structure ported from BabyVLM repo,
+          styled with the tutorial's own palette so it stays theme/dark aware) */
     .dx-sample { display: flex; flex-direction: column; gap: var(--sp-5); }
     .dx-col-label {
       font-family: var(--font-sans); font-size: 12px; font-weight: 700;
@@ -814,6 +787,53 @@
       font-family: var(--font-sans); font-size: 13px; font-weight: 700; color: var(--accent-strong);
       background: var(--accent-tint); border-radius: 50px; padding: 2px 13px;
     }
+    /* Frame-window clip in the modal — a looping gif, no player chrome */
+    .pt-clip-player {
+      margin-top: var(--sp-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+    }
+    .pt-clip-player > img { height: auto; }
+
+    /* Shared media column for every pretraining format. BabyView stills are
+       portrait (450x800), so they are sized by column width rather than by a
+       height cap — that is what keeps a tall frame from rendering thumbnail-small. */
+    .pt-media { flex: 0 1 auto; max-width: 46%; min-width: 150px; }
+    .pt-media > img, .pt-media > video, .pt-media > .frame-player {
+      display: block; width: 100%; height: auto;
+      border-radius: var(--radius-lg); border: 1px solid var(--border);
+      background: var(--surface-2);
+    }
+    .pt-media > video { background: #16150f; }
+
+    /* Multi-turn: one exchange per row, frame left / utterance right. Frames are
+       bounded here because a long exchange would otherwise run to many screens. */
+    .pt-turn-row { align-items: flex-start; }
+    .pt-turn-row + .pt-turn-row { margin-top: var(--sp-6); }
+    .pt-turn-row .pt-media { max-width: 40%; }
+    /* Bound both axes: max-height alone lets a landscape frame resolve wider
+       than its column and slide under the utterance. */
+    .pt-turn-row .pt-media > img,
+    .pt-turn-row .pt-media > video,
+    .pt-turn-row .pt-media > .frame-player {
+      width: auto; height: auto;
+      max-width: 100%; max-height: 420px;
+    }
+    @media (max-width: 760px) {
+      .pt-media, .pt-turn-row .pt-media { max-width: 100%; }
+    }
+
+    /* Real video clip (SAYCam ships mp4s; BabyView falls back to frames) */
+    .dx-video {
+      display: block;
+      width: 100%;
+      max-width: 520px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      background: #16150f;
+      margin-top: var(--sp-2);
+    }
+
     @media (max-width: 760px) {
       .dx-stimulus { max-width: 100%; }
       .dx-body { gap: var(--sp-4); }
@@ -868,7 +888,7 @@
       .card:nth-child(n+11) { animation-delay: 0.42s; }
     }
 
-    /* ═══════════════════ Aesthetic enhancements ═══════════════════ */
+    /* Aesthetic enhancements */
     /* subtle paper grain — sits behind all content */
     body::before {
       content: "";
@@ -909,19 +929,6 @@
     }
     .section-head.is-active h2 { color: var(--ink); padding-left: 26px; }
     .section-head.is-active h2::before { width: 18px; }
-
-    /* animated sun/moon crossfade for the theme toggle */
-    .theme-toggle { position: relative; }
-    .theme-toggle svg {
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 18px; height: 18px;
-      transition: transform 0.45s var(--ease), opacity 0.3s var(--ease);
-    }
-    .theme-toggle .icon-moon { display: block; opacity: 1; transform: translate(-50%, -50%); }
-    .theme-toggle .icon-sun  { display: block; opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0.5); }
-    :root[data-theme="dark"] .theme-toggle .icon-moon { display: block; opacity: 0; transform: translate(-50%, -50%) rotate(90deg) scale(0.5); }
-    :root[data-theme="dark"] .theme-toggle .icon-sun  { display: block; opacity: 1; transform: translate(-50%, -50%); }
 
     /* richer card hover — soft accent ring alongside the lift */
     .card:hover {
@@ -972,20 +979,11 @@
     <div class="nav-links">
       <a href="index.html">Tutorial</a>
       <a href="dataset.html" class="active">Dataset</a>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4.2"/>
-          <path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/>
-        </svg>
-      </button>
     </div>
   </div>
 </nav>
 
-<!-- ═══════════════════ HERO ═══════════════════ -->
+<!-- HERO -->
 <header>
   <div class="hero-inner">
     <div class="hero-lead">
@@ -996,11 +994,13 @@
       Browse real demo samples across the four data sources — egocentric SAYCam,
       BabyView, and Ego4D, plus the NIH Baby Toolbox® evaluation. Pick a
       source and task, then open any sample to see its full vision–language conversation.
+      Further down, the same controls open the <a href="#pretraining">pretraining corpus</a>
+      the model learns from.
     </p>
   </div>
 </header>
 
-<!-- ═══════════════════ MAIN ═══════════════════ -->
+<!-- MAIN -->
 <main>
 
   <!-- Overview -->
@@ -1044,6 +1044,29 @@
     </div>
   </section>
 
+  <!-- Pretraining explorer -->
+  <section id="pretraining" class="reveal">
+    <div class="section-head"><h2>Pretraining Data</h2></div>
+    <div class="section-body">
+      <p class="section-intro">
+        The samples above are <em>evaluation</em> tasks. This is what the model actually
+        pretrains on: raw egocentric experience from SAYCam and BabyView paired with
+        caregiver utterances.
+      </p>
+
+      <div class="control-bar">
+        <div class="control-label">Data source</div>
+        <div class="tab-row" id="ptSourceTabs"></div>
+
+        <div class="control-label">Format</div>
+        <div class="chip-row" id="ptFormatChips"></div>
+        <div class="task-desc" id="ptFormatDesc"></div>
+      </div>
+
+      <div id="ptGrid" class="grid"></div>
+    </div>
+  </section>
+
   <p class="note">
     Showing a curated subset for fast browsing. For the complete corpus and methodology, see the
     <a href="https://shawnking98.github.io/BabyVLM-v2/" target="_blank" rel="noopener">BabyVLM-v2 project page</a>.
@@ -1070,7 +1093,7 @@
 </footer>
 
 <script>
-// ── Task metadata ──────────────────────────────────────────
+// Task metadata
 const TASK_INFO = {
   'count':              { label: 'Count',                desc: 'Object counting — how many of a given object appear in the frame.' },
   'memory':             { label: 'Memory',               desc: 'Recognition memory — touch the newly seen image across a growing sequence.' },
@@ -1090,7 +1113,7 @@ const TASK_INFO = {
   'whohasmore_synthetic': { label: 'Who has more',        desc: 'Quantity comparison — which image has more of the object (synthetic).' },
 };
 
-// ── Source / task configuration ────────────────────────────
+// Source / task configuration
 const EGO4D_TASKS = ['count','memory','vdr-binary','vdr-open','localize','leftright','picture_vocabulary','spatialdetails','compare_synthetic','compare_real'];
 const NIH_TASKS   = ['count','memory','picture_vocab','picture_vocab_selected','spatial','vdr','who_has_more'];
 const BABYVIEW_TASKS = ['count','localize','leftright','whohasmore_synthetic'];
@@ -1129,7 +1152,7 @@ const SOURCES = {
 // vdr has its own task key in nih
 TASK_INFO['vdr'] = { label: 'VDR', desc: 'Visual delayed response — track the object across frames and report its motion.' };
 
-// ── Curated subset ─────────────────────────────────────────
+// Curated subset
 // The exact clips/videos chosen per source × task, matched to the
 // BabyVLM-v2 workshop Data Explorer (example.html). Values are item
 // indices into each task's data.json (≤3 hand-picked, face-screened
@@ -1203,10 +1226,10 @@ function curatedFor(source, split, task) {
   return CURATED[key] || null;
 }
 
-// ── State ──────────────────────────────────────────────────
+// State
 const state = { source: 'sft', split: 'train', task: null };
 
-// ── Elements ───────────────────────────────────────────────
+// Elements
 const sourceTabs = document.getElementById('sourceTabs');
 const splitWrap  = document.getElementById('splitWrap');
 const splitTabs  = document.getElementById('splitTabs');
@@ -1216,7 +1239,7 @@ const grid       = document.getElementById('grid');
 const overlay    = document.getElementById('overlay');
 const modalContent = document.getElementById('modalContent');
 
-// ── Helpers ────────────────────────────────────────────────
+// Helpers
 function basePath() {
   const s = SOURCES[state.source];
   return s.splits ? s.base(state.task, state.split) : s.base(state.task);
@@ -1225,7 +1248,19 @@ function basePath() {
 // the current image/gif files (same token within a session → still cached while
 // browsing). Prevents stale cached images when the underlying files change.
 const ASSET_V = Date.now();
-function imgUrl(rel) { return `${basePath()}/${rel}?v=${ASSET_V}`; }
+// An item's image paths are rewritten to be site-relative when its data.json is
+// loaded (see resolveItem), so building a URL doesn't depend on which explorer
+// is currently active — the toolbox and pretraining grids share these renderers.
+function imgUrl(rel) { return `${rel}?v=${ASSET_V}`; }
+
+// Prefix an item's image/gif paths with the directory its data.json came from.
+function resolveItem(item, base) {
+  const it = Object.assign({}, item);
+  if (Array.isArray(it.image)) it.image = it.image.map(r => `${base}/${r}`);
+  if (it.gif) it.gif = `${base}/${it.gif}`;
+  if (it.video) it.video = `${base}/${it.video}`;
+  return it;
+}
 
 function cleanText(t) { return t.replace(/<image>/g, ' ').replace(/\s+/g, ' ').trim(); }
 
@@ -1253,7 +1288,7 @@ function makeImg(rel) {
   return img;
 }
 
-// ── VDR animated frame player ("gif") ──────────────────────
+// VDR animated frame player ("gif")
 // VDR samples are a sequence of video frames; instead of showing them as a
 // static strip we cycle through them automatically like a looping gif.
 const VDR_TASKS = new Set(['vdr', 'vdr-binary', 'vdr-open']);
@@ -1281,10 +1316,12 @@ function makeFramePlayer(rels, opts, registry) {
   img.alt = 'VDR frame sequence';
   wrap.appendChild(img);
 
-  const badge = document.createElement('span');
-  badge.className = 'frame-player-badge';
-  badge.textContent = rels.length + ' frames';
-  wrap.appendChild(badge);
+  if (!opts.noBadge) {
+    const badge = document.createElement('span');
+    badge.className = 'frame-player-badge';
+    badge.textContent = rels.length + ' frames';
+    wrap.appendChild(badge);
+  }
 
   const urls = rels.map(imgUrl);
   urls.forEach((u) => { const p = new Image(); p.src = u; }); // preload all frames
@@ -1305,7 +1342,7 @@ function makeFramePlayer(rels, opts, registry) {
   return wrap;
 }
 
-// ── Real animated .gif clip ────────────────────────────────
+// Real animated .gif clip
 // When a VDR item carries a pre-rendered `gif`, show that exact file (the
 // same clip example.html displays) instead of frame-cycling, so the video
 // is identical across both pages. Reuses the frame-player's styling.
@@ -1324,7 +1361,7 @@ function makeGifPlayer(gifRel, nframes, opts) {
   return wrap;
 }
 
-// ── Enhanced VDR player for the modal ──────────────────────
+// Enhanced VDR player for the modal
 // A larger "stage" with play/pause, a draggable scrubber (with per-frame
 // ticks), a live frame counter, and a playback-speed toggle.
 const VDR_REDUCE = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -1336,7 +1373,7 @@ function makeVdrPlayer(rels, registry) {
   const stage = document.createElement('div');
   stage.className = 'vdr-stage';
 
-  // ── screen ──
+  // screen
   const screen = document.createElement('div');
   screen.className = 'vdr-screen';
 
@@ -1360,7 +1397,7 @@ function makeVdrPlayer(rels, registry) {
 
   stage.appendChild(screen);
 
-  // ── controls ──
+  // controls
   const controls = document.createElement('div');
   controls.className = 'vdr-controls';
 
@@ -1397,7 +1434,7 @@ function makeVdrPlayer(rels, registry) {
   controls.appendChild(speed);
   stage.appendChild(controls);
 
-  // ── state ──
+  // state
   const PLAY = '▶', PAUSE = '❚❚';
   const BASE_INTERVAL = 120;
   const SPEEDS = [0.5, 1, 2];
@@ -1473,7 +1510,7 @@ function makeVdrPlayer(rels, registry) {
   return stage;
 }
 
-// ── Renderers ──────────────────────────────────────────────
+// Renderers
 function renderSourceTabs() {
   sourceTabs.innerHTML = '';
   for (const [key, cfg] of Object.entries(SOURCES)) {
@@ -1522,8 +1559,9 @@ function renderAll() {
   loadTask();
 }
 
-function renderSkeletons(n) {
-  grid.innerHTML = '';
+function renderSkeletons(n, target) {
+  const host = target || grid;
+  host.innerHTML = '';
   for (let i = 0; i < n; i++) {
     const c = document.createElement('div');
     c.className = 'skeleton-card';
@@ -1534,14 +1572,17 @@ function renderSkeletons(n) {
       '<div class="skeleton skeleton-line short"></div>' +
       '<div class="skeleton skeleton-badge"></div>' +
       '</div>';
-    grid.appendChild(c);
+    host.appendChild(c);
   }
 }
 
 async function loadTask() {
   stopPlayers(gridPlayers);
   renderSkeletons(8);
-  const url = `${basePath()}/data.json`;
+  // Capture the base up front so a task switch mid-fetch can't pair this
+  // response with another task's directory.
+  const base = basePath();
+  const url = `${base}/data.json`;
   let data;
   try {
     const res = await fetch(url, { cache: 'no-store' });
@@ -1559,6 +1600,7 @@ async function loadTask() {
   if (pick) data = pick.filter(i => i < data.length).map(i => data[i]);
   data = data.slice(0, 3);
   if (!data.length) { grid.innerHTML = '<div class="empty">No curated samples available for this task yet.</div>'; return; }
+  data = data.map(it => resolveItem(it, base));
   grid.innerHTML = '';
   data.forEach((item, i) => grid.appendChild(makeCard(item, i)));
 }
@@ -1600,7 +1642,7 @@ function makeCard(item, i) {
   return card;
 }
 
-// ── Sample rendering (ported verbatim from the BabyVLM repo explorer) ──
+// Sample rendering (ported verbatim from the BabyVLM repo explorer)
 // Each <image> token in the prompt is mapped to its role: an image whose
 // preceding text carries an option label like "(A)" is an ANSWER CHOICE, the
 // rest are STIMULUS. This is what keeps photos aligned with their text.
@@ -1782,7 +1824,7 @@ function renderSample(item) {
   const grid = document.createElement('div');
   grid.className = 'dx-sample';
 
-  // ── Full-width prompt on top ──
+  // Full-width prompt on top
   const promptBlock = document.createElement('div');
   promptBlock.appendChild(colLabel('Prompt'));
   const pt = document.createElement('div');
@@ -1807,7 +1849,7 @@ function renderSample(item) {
     return frag;
   }
 
-  // ── Body row: stimulus image / clip (left) + answer choices (right) ──
+  // Body row: stimulus image / clip (left) + answer choices (right)
   const body = document.createElement('div');
   body.className = 'dx-body';
 
@@ -1880,38 +1922,303 @@ function openModal(item) {
   overlay.classList.add('open');
 }
 
+// Pretraining explorer
+// Same controls, cards and modal as the toolbox explorer above, pointed at the
+// pretraining corpus instead: source tabs → format chips → grid → modal.
+const PT_FORMATS = {
+  single_image: {
+    label: 'Single images',
+    badge: 'image',
+    desc: 'One egocentric frame paired with an utterance.',
+  },
+  video_clip: {
+    label: 'Video clips',
+    badge: 'clip',
+    desc: 'A short clip paired with an utterance.',
+  },
+  multi_turn: {
+    label: 'Multi-turn utterances',
+    badge: 'sequence',
+    desc: 'Several utterances interleaved with what the child sees.',
+  },
+};
+
+const PT_SOURCES = {
+  saycam:   { label: 'SAYCam',   base: (m) => `data/pretrain_sample/saycam/${m}` },
+  babyview: { label: 'BabyView', base: (m) => `data/pretrain_sample/babyview/${m}` },
+};
+
+// Source × format combinations whose sample data is on disk. Anything absent
+// renders an "awaiting data" placeholder rather than a failed fetch; add the key
+// here once its directory lands under data/pretrain_sample/.
+const PT_READY = new Set([
+  'saycam/single_image',   'saycam/video_clip',   'saycam/multi_turn',
+  'babyview/single_image', 'babyview/video_clip', 'babyview/multi_turn',
+]);
+
+const PT_FRAME_MS = 200;   // frame-window cadence, ~1.6s for an 8-frame clip
+let ptPlayers = [];
+
+const ptState = { source: 'saycam', format: 'single_image' };
+
+const ptSourceTabs  = document.getElementById('ptSourceTabs');
+const ptFormatChips = document.getElementById('ptFormatChips');
+const ptFormatDesc  = document.getElementById('ptFormatDesc');
+const ptGrid        = document.getElementById('ptGrid');
+
+function ptBase() { return PT_SOURCES[ptState.source].base(ptState.format); }
+function ptIsReady() { return PT_READY.has(`${ptState.source}/${ptState.format}`); }
+function ptIsClip(item) { return !!item.gif || ptState.format === 'video_clip'; }
+
+// The language paired with an item: the first turn that carries actual text
+// (a caption item's opening human turn is a bare <image> token).
+function ptPreview(item) {
+  for (const c of item.conversations || []) {
+    const t = cleanText(c.value);
+    if (t) return t;
+  }
+  return '';
+}
+
+// A muted, looping, autoplaying mp4 with no player chrome — it behaves like a
+// gif, matching the BabyView frame windows. Muted + playsInline is what lets a
+// browser start it without a user gesture, so cards play on their own.
+function ptVideo(item, className) {
+  const v = document.createElement('video');
+  v.className = className;
+  v.src = imgUrl(item.video);
+  const images = item.image || [];
+  if (images.length) v.poster = imgUrl(images[0]);
+  v.controls = false;
+  v.loop = true; v.muted = true; v.defaultMuted = true;
+  v.autoplay = true; v.playsInline = true; v.preload = 'auto';
+  v.setAttribute('muted', '');
+  v.addEventListener('canplay', () => { const p = v.play(); if (p) p.catch(() => {}); });
+  return v;
+}
+
+function ptCard(item) {
+  const card = document.createElement('div');
+  card.className = 'card';
+
+  const images = item.image || [];
+  if (item.video) {
+    // real mp4 — plays in the grid, no chrome on a thumbnail
+    card.appendChild(ptVideo(item, 'card-thumb'));
+  } else if (ptIsClip(item) && images.length > 1) {
+    // frame window — cycle it like a gif
+    card.appendChild(makeFramePlayer(images, {
+      className: 'card-thumb-player', interval: PT_FRAME_MS, noBadge: true,
+    }, ptPlayers));
+  } else {
+    const thumb = makeImg(item.gif || images[0] || '');
+    thumb.className = 'card-thumb';
+    card.appendChild(thumb);
+  }
+
+  const body = document.createElement('div');
+  body.className = 'card-body';
+
+  const q = document.createElement('div');
+  q.className = 'card-q';
+  q.textContent = ptPreview(item);
+  body.appendChild(q);
+
+  const meta = document.createElement('div');
+  meta.className = 'card-meta';
+  const tag = document.createElement('span');
+  tag.className = 'badge badge-ans';
+  tag.textContent = item.label || PT_FORMATS[ptState.format].badge;
+  meta.appendChild(tag);
+  const n = images.length;
+  const ib = document.createElement('span');
+  ib.className = 'badge badge-img';
+  // A real mp4 isn't a frame count; otherwise only a clip's images are frames,
+  // a dialogue's are separate views.
+  ib.textContent = item.video ? 'video'
+    : ptIsClip(item) ? (n + ' frames')
+    : (n + (n === 1 ? ' img' : ' imgs'));
+  meta.appendChild(ib);
+  body.appendChild(meta);
+
+  card.appendChild(body);
+  card.onclick = () => ptOpenModal(item);
+  return card;
+}
+
+// The media column: an mp4, a looping frame window, or a still.
+function ptMediaBlock(item, rels) {
+  const box = document.createElement('div');
+  box.className = 'pt-media';
+  if (item.video) {
+    box.appendChild(ptVideo(item, ''));
+  } else if (rels.length > 1) {
+    box.appendChild(makeFramePlayer(rels, {
+      className: 'pt-clip-player', interval: PT_FRAME_MS, noBadge: true,
+    }, modalPlayers));
+  } else if (rels.length) {
+    box.appendChild(makeImg(rels[0]));
+  }
+  return box;
+}
+
+function ptUtterance(text) {
+  const col = document.createElement('div');
+  col.className = 'dx-col-right';
+  col.appendChild(colLabel('Utterance'));
+  const turn = document.createElement('div');
+  turn.className = 'dx-turn dx-gpt';
+  turn.appendChild(bubbleEl(text || '—'));
+  col.appendChild(turn);
+  return col;
+}
+
+// Multi-turn: one row per exchange, so each frame gets a column of its own
+// instead of being stacked at thumbnail height.
+function ptRenderTurns(item) {
+  const frag = document.createDocumentFragment();
+  const conv = item.conversations || [];
+  const images = item.image || [];
+  let imgIdx = 0;
+  for (let i = 0; i < conv.length; i++) {
+    if (conv[i].from !== 'human') continue;
+    const parts = conv[i].value.split('<image>');
+    const rels = [];
+    for (let k = 0; k < parts.length - 1 && imgIdx < images.length; k++) {
+      rels.push(images[imgIdx++]);
+    }
+    const next = conv[i + 1];
+    const reply = (next && next.from === 'gpt') ? next.value.trim() : '';
+
+    const row = document.createElement('div');
+    row.className = 'dx-body pt-turn-row';
+    const media = ptMediaBlock({}, rels);
+    media.insertBefore(colLabel('Frame'), media.firstChild);
+    row.appendChild(media);
+    row.appendChild(ptUtterance(reply));
+    frag.appendChild(row);
+  }
+  return frag;
+}
+
+function ptRenderSample(item) {
+  const frag = document.createDocumentFragment();
+  const conv = item.conversations || [];
+  const images = item.image || [];
+  const isClip = ptIsClip(item);
+
+  if (conv.filter(c => c.from === 'human').length > 1) {
+    frag.appendChild(ptRenderTurns(item));
+    return frag;
+  }
+
+  const wrap = document.createElement('div');
+  wrap.className = 'dx-sample';
+
+  const body = document.createElement('div');
+  body.className = 'dx-body';
+  const media = ptMediaBlock(item, images);
+  media.insertBefore(colLabel(isClip ? 'Clip' : 'Frame'), media.firstChild);
+  body.appendChild(media);
+  body.appendChild(ptUtterance(ptPreview(item)));
+  wrap.appendChild(body);
+
+  frag.appendChild(wrap);
+  return frag;
+}
+
+function ptOpenModal(item) {
+  modalContent.innerHTML = '';
+  const tag = document.createElement('div');
+  tag.className = 'modal-tag';
+  tag.textContent = `${PT_SOURCES[ptState.source].label.toUpperCase()} · ` +
+    `${PT_FORMATS[ptState.format].label} · pretraining`;
+  modalContent.appendChild(tag);
+
+  const idEl = document.createElement('div');
+  idEl.className = 'modal-id';
+  idEl.textContent = 'id: ' + (item.id || '—');
+  modalContent.appendChild(idEl);
+
+  modalContent.appendChild(ptRenderSample(item));
+  overlay.classList.add('open');
+}
+
+function ptRenderSourceTabs() {
+  ptSourceTabs.innerHTML = '';
+  for (const [key, cfg] of Object.entries(PT_SOURCES)) {
+    const b = document.createElement('button');
+    b.className = 'tab' + (key === ptState.source ? ' active' : '');
+    b.textContent = cfg.label;
+    b.onclick = () => {
+      // Switching corpus starts over at the first format, matching how the
+      // toolbox explorer above resets its task and split.
+      ptState.source = key;
+      ptState.format = Object.keys(PT_FORMATS)[0];
+      ptRenderSourceTabs();
+      ptRenderFormatChips();
+      ptLoad();
+    };
+    ptSourceTabs.appendChild(b);
+  }
+}
+
+function ptRenderFormatChips() {
+  ptFormatChips.innerHTML = '';
+  for (const [key, cfg] of Object.entries(PT_FORMATS)) {
+    const b = document.createElement('button');
+    b.className = 'chip' + (key === ptState.format ? ' active' : '');
+    b.textContent = cfg.label;
+    b.onclick = () => { ptState.format = key; ptRenderFormatChips(); ptLoad(); };
+    ptFormatChips.appendChild(b);
+  }
+  ptFormatDesc.textContent = PT_FORMATS[ptState.format].desc;
+}
+
+async function ptLoad() {
+  const source = PT_SOURCES[ptState.source].label;
+  const format = PT_FORMATS[ptState.format].label.toLowerCase();
+  if (!ptIsReady()) {
+    stopPlayers(ptPlayers);
+    ptGrid.innerHTML =
+      `<div class="empty">Sample data for <strong>${source} ${format}</strong> ` +
+      `is not in the repo yet.</div>`;
+    return;
+  }
+  stopPlayers(ptPlayers);
+  renderSkeletons(6, ptGrid);
+  const base = ptBase();
+  const url = `${base}/data.json`;
+  let data;
+  try {
+    const res = await fetch(url, { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    data = await res.json();
+  } catch (e) {
+    ptGrid.innerHTML = `<div class="empty">Could not load <code>${url}</code>.<br>Serve the site over http (e.g. <code>python3 -m http.server</code>).</div>`;
+    return;
+  }
+  if (!Array.isArray(data)) data = [data];
+  if (!data.length) { ptGrid.innerHTML = '<div class="empty">No samples.</div>'; return; }
+  data = data.map(it => resolveItem(it, base));
+  ptGrid.innerHTML = '';
+  data.forEach(item => ptGrid.appendChild(ptCard(item)));
+}
+
+function renderPretrain() {
+  ptRenderSourceTabs();
+  ptRenderFormatChips();
+  ptLoad();
+}
+
 function closeModal() { stopPlayers(modalPlayers); overlay.classList.remove('open'); }
 document.getElementById('modalClose').onclick = closeModal;
 overlay.onclick = (e) => { if (e.target === overlay) closeModal(); };
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
-// ── Theme toggle ───────────────────────────────────────────
-(function () {
-  var root = document.documentElement;
-  var btn = document.getElementById('themeToggle');
-  if (!btn) return;
-  var mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-
-  var meta = document.getElementById('themeColorMeta');
-  function apply(dark) {
-    if (dark) root.setAttribute('data-theme', 'dark');
-    else root.setAttribute('data-theme', 'light');
-    btn.setAttribute('aria-pressed', String(dark));
-    if (meta) meta.setAttribute('content', dark ? '#16150f' : '#f6f5f1');
-  }
-  apply(root.getAttribute('data-theme') === 'dark');
-
-  btn.addEventListener('click', function () {
-    var dark = root.getAttribute('data-theme') !== 'dark';
-    apply(dark);
-    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
-  });
-
-  // Light is the default; the OS setting is intentionally not followed.
-})();
-
-// ── Init ───────────────────────────────────────────────────
+// Init
 renderAll();
+renderPretrain();
 
 // Scrollspy — highlight the current section's left-rail label.
 (function () {

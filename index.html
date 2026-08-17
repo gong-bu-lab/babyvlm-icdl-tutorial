@@ -3,20 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" id="themeColorMeta" content="#f6f5f1" />
+  <meta name="theme-color" content="#f6f5f1" />
   <title>BabyVLM Tutorial</title>
-
-  <!-- Apply saved/system theme before first paint to avoid a flash -->
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem('theme');
-        // Default to light; only go dark if the user explicitly chose it.
-        var dark = saved === 'dark';
-        if (dark) document.documentElement.setAttribute('data-theme', 'dark');
-      } catch (e) {}
-    })();
-  </script>
 
   <link rel="icon" type="image/png" href="assets/thickbaby.png" />
 
@@ -25,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ═══════════════════ Design tokens ═══════════════════ */
+    /* Design tokens */
     :root {
       /* Palette — "Field Notes": warm paper, ink, one sage-forest accent */
       --paper:        #f6f5f1;
@@ -40,6 +28,11 @@
       --accent:       #3f5a4a;
       --accent-strong:#2e4436;
       --accent-tint:  #eaefe9;
+
+      /* Text selection — its own pair, since --accent-tint is too pale to read
+         as a highlight and is already spoken for by badges, tags and avatars. */
+      --select-bg:    #c5dbc8;
+      --select-fg:    #22301f;
 
       /* Type */
       --font-display: "Fraunces", Georgia, "Times New Roman", serif;
@@ -66,7 +59,8 @@
       --tag-hands-fg:   #7a5b16;
     }
 
-    /* ═══════════════════ Dark theme ═══════════════════ */
+    /* Dark theme — retained but currently unreachable: the toggle was removed
+       and nothing sets data-theme, so the site always renders light. */
     :root[data-theme="dark"] {
       --paper:        #16150f;
       --surface:      #201e17;
@@ -80,6 +74,9 @@
       --accent:       #8fb39d;
       --accent-strong:#aecabb;
       --accent-tint:  #242f28;
+
+      --select-bg:    #3a5c47;
+      --select-fg:    #ece8dd;
 
       --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
       --shadow:    0 1px 2px rgba(0,0,0,0.3), 0 14px 34px -20px rgba(0,0,0,0.6);
@@ -109,7 +106,7 @@
       transition: background 0.3s var(--ease), color 0.3s var(--ease);
     }
 
-    ::selection { background: var(--accent-tint); color: var(--accent-strong); }
+    ::selection { background: var(--select-bg); color: var(--select-fg); }
     a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
 
     :focus-visible {
@@ -118,7 +115,7 @@
       border-radius: 2px;
     }
 
-    /* ═══════════════════ Animation primitives ═══════════════════ */
+    /* Animation primitives */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: none; }
@@ -150,7 +147,7 @@
     .anim-4 { animation-delay: 0.38s; }
     .anim-5 { animation-delay: 0.49s; }
 
-    /* ═══════════════════ Top nav ═══════════════════ */
+    /* Top nav */
     .site-nav {
       position: sticky;
       top: 0;
@@ -203,31 +200,7 @@
     .nav-links a:hover::after { right: 0; }
     .nav-links a.active::after { right: 0; }
 
-    /* theme toggle */
-    .theme-toggle {
-      flex: none;
-      width: 34px; height: 34px;
-      border-radius: 50%;
-      border: 1px solid var(--border-strong);
-      background: var(--surface);
-      color: var(--ink-soft);
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      line-height: 1;
-      transition: background 0.2s var(--ease), border-color 0.2s var(--ease),
-                  color 0.2s var(--ease), transform 0.15s var(--ease);
-    }
-    .theme-toggle:hover { border-color: var(--ink); color: var(--ink); transform: translateY(-1px); }
-    .theme-toggle svg { width: 18px; height: 18px; display: block; }
-    /* show sun in dark mode (click → light), moon in light mode (click → dark) */
-    .theme-toggle .icon-sun  { display: none; }
-    :root[data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
-    :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-
-    /* ═══════════════════ Hero ═══════════════════ */
+    /* Hero */
     header {
       padding: clamp(48px, 8vw, 108px) clamp(20px, 5vw, 56px) clamp(44px, 6vw, 76px);
       border-bottom: 1px solid var(--border);
@@ -308,7 +281,7 @@
     .btn-secondary:hover { border-color: var(--ink); background: var(--surface); transform: translateY(-2px); }
     .btn:active { transform: translateY(0); }
 
-    /* ═══════════════════ Main layout ═══════════════════ */
+    /* Main layout */
     main {
       max-width: var(--maxw);
       margin: 0 auto;
@@ -391,7 +364,7 @@
       opacity: 0.55;
     }
 
-    /* ── Framework pillars — editorial list, not an icon grid ── */
+    /* Framework pillars — editorial list, not an icon grid */
     .pillars { margin-top: var(--sp-7); border-top: 1px solid var(--border); }
     .pillar {
       display: grid;
@@ -417,7 +390,7 @@
     }
     .pillar p { font-size: 0.98rem; color: var(--muted); margin: 0; }
 
-    /* ── Tables (schedule + resources) ── */
+    /* Tables (schedule + resources) */
     .schedule { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
     .schedule thead th {
       font-family: var(--font-sans);
@@ -474,7 +447,7 @@
     .tag-break  { background: transparent; color: var(--faint); border-color: var(--border-strong); }
     .tag-hands  { background: var(--tag-hands-bg); color: var(--tag-hands-fg); }
 
-    /* ── Speaker cards ── */
+    /* Speaker cards */
     .speakers {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -511,7 +484,7 @@
     .speaker-name { font-weight: 600; font-size: 0.98rem; color: var(--ink); }
     .speaker-affil { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
 
-    /* ── Citation ── */
+    /* Citation */
     .cite-block {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -525,7 +498,7 @@
       color: var(--ink-soft);
     }
 
-    /* ── Footer ── */
+    /* Footer */
     footer {
       font-size: 0.85rem;
       color: var(--muted);
@@ -535,7 +508,7 @@
     footer .footer-inner { max-width: var(--maxw); margin: 0 auto; text-align: center; }
     footer a { color: var(--ink-soft); }
 
-    /* ── Responsive ── */
+    /* Responsive */
     @media (max-width: 880px) {
       .hero-inner { grid-template-columns: 1fr; align-items: start; gap: var(--sp-7); }
       .hero-side { border-left: 0; padding-left: 0; }
@@ -550,7 +523,7 @@
       .time { width: auto; }
     }
 
-    /* ═══════════════════ Aesthetic enhancements ═══════════════════ */
+    /* Aesthetic enhancements */
     /* subtle paper grain — sits behind all content */
     body::before {
       content: "";
@@ -603,19 +576,6 @@
     .section-head.is-active h2 { color: var(--ink); padding-left: 26px; }
     .section-head.is-active h2::before { width: 18px; }
 
-    /* animated sun/moon crossfade for the theme toggle */
-    .theme-toggle { position: relative; }
-    .theme-toggle svg {
-      position: absolute;
-      top: 50%; left: 50%;
-      width: 18px; height: 18px;
-      transition: transform 0.45s var(--ease), opacity 0.3s var(--ease);
-    }
-    .theme-toggle .icon-moon { display: block; opacity: 1; transform: translate(-50%, -50%); }
-    .theme-toggle .icon-sun  { display: block; opacity: 0; transform: translate(-50%, -50%) rotate(-90deg) scale(0.5); }
-    :root[data-theme="dark"] .theme-toggle .icon-moon { display: block; opacity: 0; transform: translate(-50%, -50%) rotate(90deg) scale(0.5); }
-    :root[data-theme="dark"] .theme-toggle .icon-sun  { display: block; opacity: 1; transform: translate(-50%, -50%); }
-
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -632,20 +592,11 @@
     <div class="nav-links">
       <a href="index.html" class="active">Tutorial</a>
       <a href="dataset.html">Dataset</a>
-      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle light / dark mode">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
-        </svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="4.2"/>
-          <path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"/>
-        </svg>
-      </button>
     </div>
   </div>
 </nav>
 
-<!-- ═══════════════════ HERO ═══════════════════ -->
+<!-- HERO -->
 <header>
   <div class="hero-inner">
     <div class="hero-lead">
@@ -671,7 +622,7 @@
   </div>
 </header>
 
-<!-- ═══════════════════ MAIN ═══════════════════ -->
+<!-- MAIN -->
 <main>
 
   <!-- Abstract -->
@@ -878,31 +829,6 @@
 </footer>
 
 <script>
-// ── Theme toggle ───────────────────────────────────────────
-(function () {
-  var root = document.documentElement;
-  var btn = document.getElementById('themeToggle');
-  if (!btn) return;
-  var mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
-
-  var meta = document.getElementById('themeColorMeta');
-  function apply(dark) {
-    if (dark) root.setAttribute('data-theme', 'dark');
-    else root.setAttribute('data-theme', 'light');
-    btn.setAttribute('aria-pressed', String(dark));
-    if (meta) meta.setAttribute('content', dark ? '#16150f' : '#f6f5f1');
-  }
-  apply(root.getAttribute('data-theme') === 'dark');
-
-  btn.addEventListener('click', function () {
-    var dark = root.getAttribute('data-theme') !== 'dark';
-    apply(dark);
-    try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
-  });
-
-  // Light is the default; the OS setting is intentionally not followed.
-})();
-
 // Scrollspy — highlight the current section's left-rail label.
 (function () {
   if (!('IntersectionObserver' in window)) return;

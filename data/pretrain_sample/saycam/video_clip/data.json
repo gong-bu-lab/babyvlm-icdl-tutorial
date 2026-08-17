@@ -1,0 +1,71 @@
+[
+ {
+  "id": "saycam_clip_0",
+  "image": [
+   "media/clip_0000.jpg"
+  ],
+  "video": "media/clip_0000.mp4",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "are you sure you're done"
+   }
+  ],
+  "meta": {
+   "subject": "Y",
+   "recorded": "2020-01-18",
+   "recording": "Y_20200118_2304_02",
+   "clip": "Y_20200118_2304_02_816320_816880_frame2"
+  }
+ },
+ {
+  "id": "saycam_clip_1",
+  "image": [
+   "media/clip_0001.jpg"
+  ],
+  "video": "media/clip_0001.mp4",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "you love water being poured"
+   }
+  ],
+  "meta": {
+   "subject": "Y",
+   "recorded": "2018-12-18",
+   "recording": "Y_20181218_1004_01",
+   "clip": "Y_20181218_1004_01_226340_229700_frame2"
+  }
+ },
+ {
+  "id": "saycam_clip_2",
+  "image": [
+   "media/clip_0002.jpg"
+  ],
+  "video": "media/clip_0002.mp4",
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "yeah to boston again"
+   }
+  ],
+  "meta": {
+   "subject": "Y",
+   "recorded": "2019-02-08",
+   "recording": "Y_20190208_1125_03",
+   "clip": "Y_20190208_1125_03_317400_326920_frame4"
+  }
+ }
+]

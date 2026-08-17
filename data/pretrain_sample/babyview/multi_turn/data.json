@@ -1,0 +1,146 @@
+[
+ {
+  "id": "1429110",
+  "image": [
+   "media/multi_turn_0000_0.jpg",
+   "media/multi_turn_0000_1.jpg",
+   "media/multi_turn_0000_2.jpg",
+   "media/multi_turn_0000_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "That's the sound an owl makes."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "That's a mushroom."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "You're used to mushrooms too."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "We've been reading about mushrooms."
+   }
+  ],
+  "meta": {
+   "subject": "S00510002",
+   "recorded": "2024-07-23",
+   "frame": "S00510002_2024-07-23_1_recC3r5i6imRVV8gm_376793_378014_frame_8"
+  }
+ },
+ {
+  "id": "1409274",
+  "image": [
+   "media/multi_turn_0001_0.jpg",
+   "media/multi_turn_0001_1.jpg",
+   "media/multi_turn_0001_2.jpg",
+   "media/multi_turn_0001_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Today is Saturday, February 24th at 7.30 a.m. Whoa, Emma."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Do you see the little people?"
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "I'm a little person."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Do you want to grab me?"
+   }
+  ],
+  "meta": {
+   "subject": "S00370001",
+   "recorded": "2024-02-24",
+   "frame": "S00370001_2024-02-24_1_rec6KbUMeTPurKGHU_3423_8611_frame_4"
+  }
+ },
+ {
+  "id": "1400252",
+  "image": [
+   "media/multi_turn_0002_0.jpg",
+   "media/multi_turn_0002_1.jpg",
+   "media/multi_turn_0002_2.jpg",
+   "media/multi_turn_0002_3.jpg"
+  ],
+  "conversations": [
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "You'll have to get a ball and a baseball glove."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "Of course, he'll also need a bat."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "He'll ask you to pitch."
+   },
+   {
+    "from": "human",
+    "value": "<image>"
+   },
+   {
+    "from": "gpt",
+    "value": "That means the person throwing the ball."
+   }
+  ],
+  "meta": {
+   "subject": "S00320002",
+   "recorded": "2025-04-26",
+   "frame": "S00320002_2025-04-26_1_recaqJwMjMSUbraEm_118730_122214_frame_4"
+  }
+ }
+]
