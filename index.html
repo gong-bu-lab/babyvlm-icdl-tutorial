@@ -625,11 +625,64 @@
 <!-- MAIN -->
 <main>
 
+  <!-- Schedule -->
+  <section id=”schedule” class=”reveal”>
+    <div class=”section-head”><h2>Tutorial Schedule</h2></div>
+    <div class=”section-body”>
+      <table class=”schedule”>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Session</th>
+            <th>Speaker</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class=”time”>09:30 – 10:00</td>
+            <td>Opening &amp; Motivation <span class=”tag tag-talk”>Talk</span></td>
+            <td>Boqing Gong</td>
+          </tr>
+          <tr>
+            <td class=”time”>10:00 – 11:00</td>
+            <td>Introduction to Dataset <span class=”tag tag-talk”>Remote Talk</span></td>
+            <td>Michael Frank</td>
+          </tr>
+          <tr>
+            <td class=”time”>11:00 – 11:10</td>
+            <td>Coffee Break <span class=”tag tag-break”>Break</span></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td class=”time”>11:10 – 11:30</td>
+            <td>Dataset &amp; Curation Pipeline <span class=”tag tag-talk”>Talk</span></td>
+            <td>Wenqi Wang</td>
+          </tr>
+          <tr>
+            <td class=”time”>11:30 – 11:50</td>
+            <td>Modeling &amp; Algorithms <span class=”tag tag-talk”>Talk</span></td>
+            <td>Max Whitton</td>
+          </tr>
+          <tr>
+            <td class=”time”>11:50 – 12:10</td>
+            <td>Developmentally Plausible Benchmarks <span class=”tag tag-talk”>Talk</span></td>
+            <td>Max Whitton</td>
+          </tr>
+          <tr>
+            <td class=”time”>12:10 – 12:30</td>
+            <td>Instruction Tuning &amp; Experiments <span class=”tag tag-talk”>Talk</span></td>
+            <td>Wenqi Wang</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
   <!-- Abstract -->
-  <section id="abstract" class="reveal">
-    <div class="section-head"><h2>Abstract</h2></div>
-    <div class="section-body">
-      <blockquote><span class="q-mark q-open">“</span>What I cannot create,<br><span class="q-line2">I do not understand.<span class="q-mark q-close">”</span></span><cite>Richard Feynman</cite></blockquote>
+  <section id=”abstract” class=”reveal”>
+    <div class=”section-head”><h2>Abstract</h2></div>
+    <div class=”section-body”>
+      <blockquote><span class=”q-mark q-open”>”</span>What I cannot create,<br><span class=”q-line2”>I do not understand.<span class=”q-mark q-close”>”</span></span><cite>Richard Feynman</cite></blockquote>
       <p>
         Pretraining vision foundation models (VFMs) is prohibitively expensive, making it a privilege for
         institutions with abundant resources and leaving independent researchers to downstream tasks such as
@@ -649,84 +702,31 @@
         encompassing three pillars:
       </p>
 
-      <div class="pillars stagger">
-        <div class="pillar">
-          <div class="pillar-index">i</div>
+      <div class=”pillars stagger”>
+        <div class=”pillar”>
+          <div class=”pillar-index”>i</div>
           <h3>Pretraining Data</h3>
           <p>
             Curated from longitudinal, egocentric audiovisual recordings of babies — capturing how infants
             naturally perceive the world.
           </p>
         </div>
-        <div class="pillar">
-          <div class="pillar-index">ii</div>
+        <div class=”pillar”>
+          <div class=”pillar-index”>ii</div>
           <h3>Evaluation Benchmarks</h3>
           <p>
             A suite of developmentally aligned benchmarks assessing capabilities against cognitive milestones
             like object permanence, social skills, and language acquisition.
           </p>
         </div>
-        <div class="pillar">
-          <div class="pillar-index">iii</div>
+        <div class=”pillar”>
+          <div class=”pillar-index”>iii</div>
           <h3>Pretraining Codebase</h3>
           <p>
             A user-friendly codebase and baseline models designed to run on university-scale compute budgets.
           </p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Schedule -->
-  <section id="schedule" class="reveal">
-    <div class="section-head"><h2>Tutorial Schedule</h2></div>
-    <div class="section-body">
-      <table class="schedule">
-        <thead>
-          <tr>
-            <th>Time</th>
-            <th>Session</th>
-            <th>Speaker</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="time">09:30 – 10:00</td>
-            <td>Opening &amp; Motivation <span class="tag tag-talk">Talk</span></td>
-            <td>Boqing Gong</td>
-          </tr>
-          <tr>
-            <td class="time">10:00 – 11:00</td>
-            <td>Introduction to Dataset <span class="tag tag-talk">Remote Talk</span></td>
-            <td>Michael Frank</td>
-          </tr>
-          <tr>
-            <td class="time">11:00 – 11:10</td>
-            <td>Coffee Break <span class="tag tag-break">Break</span></td>
-            <td>—</td>
-          </tr>
-          <tr>
-            <td class="time">11:10 – 11:30</td>
-            <td>Dataset &amp; Curation Pipeline <span class="tag tag-talk">Talk</span></td>
-            <td>Wenqi Wang</td>
-          </tr>
-          <tr>
-            <td class="time">11:30 – 11:50</td>
-            <td>Modeling &amp; Algorithms <span class="tag tag-talk">Talk</span></td>
-            <td>Max Whitton</td>
-          </tr>
-          <tr>
-            <td class="time">11:50 – 12:10</td>
-            <td>Developmentally Plausible Benchmarks <span class="tag tag-talk">Talk</span></td>
-            <td>Max Whitton</td>
-          </tr>
-          <tr>
-            <td class="time">12:10 – 12:30</td>
-            <td>Instruction Tuning &amp; Experiments <span class="tag tag-talk">Talk</span></td>
-            <td>Wenqi Wang</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
