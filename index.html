@@ -470,16 +470,15 @@
     }
     .avatar {
       flex: none;
-      width: 52px; height: 52px;
+      width: 64px; height: 64px;
       border-radius: 50%;
       background: var(--accent-tint);
-      color: var(--accent-strong);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      font-weight: 500;
+      overflow: hidden;
+    }
+    .avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
     }
     .speaker-name { font-weight: 600; font-size: 0.98rem; color: var(--ink); }
     .speaker-affil { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
@@ -736,74 +735,34 @@
     <div class="section-body">
       <div class="speakers stagger">
         <div class="speaker-card">
-          <div class="avatar">P1</div>
+          <div class="avatar"><img src="assets/boqing.png" alt="Boqing Gong"></div>
           <div>
-            <div class="speaker-name">Presenter One</div>
-            <div class="speaker-affil">University A</div>
+            <div class="speaker-name">Boqing Gong</div>
+            <div class="speaker-affil">Boston University</div>
           </div>
         </div>
         <div class="speaker-card">
-          <div class="avatar">P2</div>
+          <div class="avatar"><img src="assets/frank.jpg" alt="Michael Frank"></div>
           <div>
-            <div class="speaker-name">Presenter Two</div>
-            <div class="speaker-affil">University B</div>
+            <div class="speaker-name">Michael Frank</div>
+            <div class="speaker-affil">Stanford University</div>
           </div>
         </div>
         <div class="speaker-card">
-          <div class="avatar">P3</div>
+          <div class="avatar"><img src="assets/wenqi.jpg" alt="Wenqi Wang"></div>
           <div>
-            <div class="speaker-name">Presenter Three</div>
-            <div class="speaker-affil">Institute C</div>
+            <div class="speaker-name">Wenqi Wang</div>
+            <div class="speaker-affil">Boston University</div>
           </div>
         </div>
-        <!-- <div class="speaker-card">
-          <div class="avatar">P4</div>
+        <div class="speaker-card">
+          <div class="avatar"><img src="assets/max.png" alt="Max Whitton"></div>
           <div>
-            <div class="speaker-name">Presenter Four</div>
-            <div class="speaker-affil">University A</div>
+            <div class="speaker-name">Max Whitton</div>
+            <div class="speaker-affil">Boston University</div>
           </div>
-        </div> -->
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Resources -->
-  <section id="resources" class="reveal">
-    <div class="section-head"><h2>Resources</h2></div>
-    <div class="section-body">
-      <p>All materials will be made available before the tutorial date. Links will be updated here.</p>
-      <table class="schedule">
-        <thead>
-          <tr><th>Resource</th><th>Description</th><th>Link</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Paper</td>
-            <td>Full technical report</td>
-            <td><a href="#">Coming soon</a></td>
-          </tr>
-          <tr>
-            <td>Dataset</td>
-            <td>Egocentric baby video corpus</td>
-            <td><a href="#">Coming soon</a></td>
-          </tr>
-          <tr>
-            <td>Code</td>
-            <td>Pretraining codebase &amp; baselines</td>
-            <td><a href="#">Coming soon</a></td>
-          </tr>
-          <tr>
-            <td>Slides</td>
-            <td>Tutorial slide decks</td>
-            <td><a href="#">Coming soon</a></td>
-          </tr>
-          <tr>
-            <td>Notebook</td>
-            <td>Hands-on Colab notebook</td>
-            <td><a href="#">Coming soon</a></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   </section>
 
