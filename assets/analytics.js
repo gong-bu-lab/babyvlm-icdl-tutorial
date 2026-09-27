@@ -18,8 +18,8 @@
  *   <key>/slides-*, file-*   a PDF or other document was opened
  *   <key>/outbound-*         a click through to an allowlisted site (TRACK below)
  *   <key>/contact-email      a mailto: click
- *   <key>/data-open-*        a collapsible section was expanded
- *   <key>/engagement-scroll-50, -90   reached that % of page height
+ *   <key>/submit-*           a click on a submission button (workshop)
+ *   <key>/data-open-*        a section that started collapsed was expanded
  *
  * These count link *opens*, not confirmed downloads: static hosting exposes no
  * server logs, and the browser's PDF viewer cannot be observed from the page.
@@ -53,7 +53,8 @@
     TRACK_SECTIONS: true,  // record <details> expansions
     RESPECT_DNT:   true,                 // honour Do Not Track / Global Privacy Control
     ALLOW_LOCAL:   false,                // true = count from anywhere, including previews
-    SCROLL_DEPTH:  [90],                 // % milestones to record; [] disables
+    SCROLL_DEPTH:  [],                   // % milestones, e.g. [90]; empty = off
+    IGNORE_PATHS:  [],                   // page paths never recorded (prefix match, after BASE_PATH)
     DEBUG:         false                 // also switched on per-visit with #analytics-debug
   };
   /* ====================================================================== */
@@ -75,6 +76,10 @@
     var p = location.pathname;
     if (CONFIG.BASE_PATH && p.indexOf(CONFIG.BASE_PATH) === 0) p = p.slice(CONFIG.BASE_PATH.length);
     if (p.charAt(0) !== '/') p = '/' + p;
+    // null tells count.js to skip the hit entirely; send() skips it too.
+    for (var i = 0; i < CONFIG.IGNORE_PATHS.length; i++) {
+      if (p.indexOf(CONFIG.IGNORE_PATHS[i]) === 0) return null;
+    }
     return CONFIG.SITE_KEY + p;
   };
 
@@ -99,6 +104,19 @@
     SENDING = false;
     log('disabled: this browser sends Do Not Track / Global Privacy Control');
   }
+
+  // TRACK keys are either a bare host ('discord.gg') or a host plus a path
+  // prefix ('openreview.net/group'), matched against host + path + query.
+  // The longest matching key wins, so a specific path beats its bare host.
+  var trackedFor = function (host, url) {
+    var target = host + url.pathname + url.search, best = '', name = null;
+    for (var k in CONFIG.TRACK) {
+      if (!Object.prototype.hasOwnProperty.call(CONFIG.TRACK, k)) continue;
+      var hit = k.indexOf('/') === -1 ? k === host : target.indexOf(k) === 0;
+      if (hit && k.length > best.length) { best = k; name = CONFIG.TRACK[k]; }
+    }
+    return name;
+  };
 
   var slug = function (s) {
     return s.toLowerCase()
@@ -165,7 +183,7 @@
   document.head.appendChild(s);
 
   log('active for "' + CONFIG.SITE_CODE + '" on ' + location.hostname +
-      '; this page load counts as ' + pagePath());
+      '; this page load counts as ' + (pagePath() || '(ignored path, not recorded)'));
 
   bindListeners();
 
@@ -209,7 +227,7 @@
     // Leaving the site — allowlist only, so the dashboard stays legible.
     if (url.origin !== location.origin && /^https?:$/.test(url.protocol)) {
       var host = url.hostname.replace(/^www\./, '');
-      var tracked = CONFIG.TRACK[host];
+      var tracked = trackedFor(host, url);
       if (!tracked) return;            // not a key interaction — deliberately ignored
       sendOnce(tracked, 'Outbound: ' + url.hostname + url.pathname);
     }
@@ -218,6 +236,9 @@
   // --- Engagement: collapsible sections -------------------------------------
   var details = CONFIG.TRACK_SECTIONS ? document.querySelectorAll('details') : [];
   Array.prototype.forEach.call(details, function (d) {
+    // A section that starts expanded is already being shown; closing and
+    // reopening it is fiddling, not interest, so it isn't counted.
+    if (d.open) return;
     d.addEventListener('toggle', function () {
       if (!d.open) return;
       var h = d.querySelector('summary h3, summary h2, summary');
